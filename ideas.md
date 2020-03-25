@@ -8,3 +8,5 @@ Check VSCode Kubernetes plugin. Contribute the features to VSCode
 maybe? Make it available for more editors - like Atom, Sublime Text
 
 2. [Remote Pairing Tool](ideas/remote-pairing-tool/remote-pairing-tool.md)
+
+3. [Startups](ideas/startups/startups.md)
