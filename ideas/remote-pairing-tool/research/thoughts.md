@@ -62,6 +62,13 @@ and thoughts
 * About audio of user, video of user, chat feature - all that is secondary for
 now and are a big problem by themselves. Let's see how we get there! :)
 
+* If only terminal has to be shared, checkout solutions like https://tmate.io ,
+and others, which are based on tmux
+
+* Check about Virtual Network Computing (VNC) server to see screen
+
+* Check about the tools I have put up in the [tools list](../remote-pairing-tool.md)
+
 Action items
 1. Read existing research papers on screen sharing
 2. Check existing tools, libraries and frameworks that help with screen
