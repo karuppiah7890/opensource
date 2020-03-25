@@ -30,3 +30,4 @@ think I could do something like this and at least have some learnings from it,
 and also may be earn a bit probably - having one's own product does sound cool
 too :P For me that is. Let's see how that goes! :)
 
+Some thoughts are [here](research/thoughts.md)
