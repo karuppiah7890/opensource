@@ -11,6 +11,18 @@ and integrated the features into [slack](https://slack.com/intl/en-in/) app
 and [here's why](https://www.notion.so/Screen-Making-WFH-Work-57df16351a884bca8027f049698eb2ce)
 4. [Tuple](https://tuple.app/) - Some fans of screenhero built this as they
 loved screenhero but were sad that it got acquired by slack
+5. [tmate](https://tmate.io) - terminal sharing tool using tmux! https://github.com/tmate-io/
+6. [Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/)
+7. [Visual Studio Code Live Share](https://code.visualstudio.com/blogs/2017/11/15/live-share) - has
+code editor, terminal shared. Audio and
+Video - not sure. A friend told me you can use your own plugins to see different
+fonts, colors and theme, compared to the other user's fonts, colors and theme.
+It felt like a cool thing! Need to research more to understand it better. More links -
+https://docs.microsoft.com/en-us/visualstudio/liveshare/
+8. [TeamHub](https://teamhub.dev/) - Real time code collaboration in any IDE.
+Looks like this supports a hell alot of IDEs! Looks good, need to try it
+sometime I guess. More links - https://github.com/GitLiveApp
+
 
 There might be more. I guess I'll do more of my research on it sooner or later.
 I also like to see the story behind services and tools, even though they may
