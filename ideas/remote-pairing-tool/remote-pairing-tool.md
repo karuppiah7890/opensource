@@ -22,7 +22,9 @@ https://docs.microsoft.com/en-us/visualstudio/liveshare/
 8. [TeamHub](https://teamhub.dev/) - Real time code collaboration in any IDE.
 Looks like this supports a hell alot of IDEs! Looks good, need to try it
 sometime I guess. More links - https://github.com/GitLiveApp
-
+9. [Jitsi](https://jitsi.org/jitsi-meet/) - Open Source Video conferencing. Has
+some desktop sharing solution too. Links - https://github.com/jitsi .
+Looks cool. Could learn from them, or reuse their components. Looks cool!
 
 There might be more. I guess I'll do more of my research on it sooner or later.
 I also like to see the story behind services and tools, even though they may
