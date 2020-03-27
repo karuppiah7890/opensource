@@ -12,3 +12,8 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 3. [Startups](ideas/startups/startups.md)
 
 4. [Golang PR Check tool](ideas/golang-pr-check/golang-pr-check.md)
+
+5. [view-counter](https://github.com/karuppiah7890/view-counter)
+
+6. [invite-buddy](https://github.com/karuppiah7890/invitebuddy)
+
