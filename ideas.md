@@ -17,3 +17,4 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 
 6. [invite-buddy](https://github.com/karuppiah7890/invitebuddy)
 
+7. [rabbit-email](https://github.com/karuppiah7890/rabbit-email)
