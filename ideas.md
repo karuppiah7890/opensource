@@ -26,3 +26,5 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 10. pika
 
 11. Play music in sync in multiple devices! Sound Seeker clone!
+
+12. [GetStream clone](ideas/getstream-clone/readme.md)
