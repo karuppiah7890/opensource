@@ -45,3 +45,27 @@ https://idratherbewriting.com/learnapidoc/pubapis_stoplight.html
 grpc can be used to easily be able to auto generate code for clients in different languages. 
 
 https://getstream.io/chat/
+
+If I need to create an open source chat app or a service to provide chat APIs
+like getstream, I need to understand and see if I really need to create everything
+from scratch. I mean, yes, it's surely reinventing the wheel 🙈 so, I'll have to
+see my goals. But let's just say I'm not going to reinvent the wheel when it
+comes to ideas and specifications and protocols. I'm just going to stick with
+what's already out there. I mean, I have seen the below cool open source
+messaging platforms
+
+https://www.signal.org
+
+https://www.signal.org/docs/
+
+https://github.com/signalapp/
+
+https://wire.com/en/
+
+https://github.com/wireapp
+
+So, may be I don't really need to write every piece of code. And I surely don't
+have to think too much about design and architecture and protocol. It shouldn't
+be that hard. So, I guess it's just a matter of putting it all together and
+seeing how it all works together ;)
+
