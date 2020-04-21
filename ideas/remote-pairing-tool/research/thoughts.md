@@ -157,3 +157,120 @@ or else piggyback with tools like zoom,
 which works on full system - less secure.
 
 ---
+
+The broad set of features we are looking at might be -
+1. Be able to view another person's screen in my computer
+2. Be able to talk to the other person - this might be key as in,
+I can't simply be seeing their computer. To communicate, I need
+something. Or else the other person has to use text - write text
+on their computer in some text editor may be to communicate with me
+and even then, I can't talk to them unless I have remote control or
+something. So, audio call is key
+3. Be able to control the mouse and keyboard of the other person -
+some things to note are - when I have a shortcut XYZ in my machine
+which does RST in my machine, and the other person also has XYZ
+shortcut in their machine, and that does MNO in their machine,
+what should happen? And what if XYZ is a shortcut for the remote
+pairing tool? Such keyboard shortcut clashes need to be taken
+care of. When which shortcut kicks off needs to be decided or
+give option to user since we cannot detect such stuff I think.
+Most probably we need some way to say, when the focus is on
+remote pairing, that is, when I'm having my mouse/keyboard
+focus in their computer and type XYZ shortcut, it should 
+effectively be something happening in their computer,
+and may be the remote pairing tool can think about how to
+provide shortcuts in such a way that there are no clashes,
+or may be just not provide any shortcuts. 
+4. Be able to video chat with the person - this is not very
+key. It's a good to have though
+5. Be able to text chat with the person. This is cool as in,
+this way, you can send some text or links to the other person
+while pairing
+6. Be able to do stuff with multiple cursors like google docs.
+I think this is awesome. Multiple cursors and all. Not sure
+how much of it is possible. But it's awesome as, it makes
+sure you don't have any problems moving around your mouse,
+while the other person is also moving it around. And also,
+no issues with both of you typing. You can both simultaneously
+type
+7. Be able to run the tool in any platform. Any is too broad,
+so, majorly - MacOS, Linux and Windows. Not sure if we can
+easily support mobile devices and tablets, and how the UI/UX will be.
+But yeah, that's a possibility too
+8. Be able to control the other person's computer very
+smoothly. This is key, as no one wants lag
+9. Be able to clearly hear the other person with no noise
+10. Be able to tell if there are any network issues causing
+disruption to the communication and collaboration
+11. Be able to see the video of the other person quite
+clearly
+12. Be able to securely do everything, with no fear that
+someone could tap into our communication or hack our computers
+and do remote control and remote code execution. Security
+must be tight to NOT allow intruders. And all communications
+must be encrypted end to end, so that no one can tap it in
+between. 
+13. Even the servers helping me to communicate should NOT
+know what I'm communicating and also, it should NOT know
+who I'm communicating with. Ideally it should NOT know
+anything and just help to communicate with the other person.
+This way, if someone hacks the server, they cannot know who
+I communicated with and collaborated with and so on. The idea
+is to keep the server as dumb as possible - without too much
+data, but just enough to help serve the users.
+14. Be able to host the servers myself given a documentation.
+Be able to host it very well and maintain it too, very
+easily.
+15. Be able to upgrade all the softwares - client and servers,
+very easily with no downtime.
+16. Be able to tell metrics regarding my communication with
+the other person - like the lag details, Internet bandwidth
+being used. Any metrics that the user can see to understand
+problems in any case any occurs or to just know some speed
+information.
+
+---
+
+Be able to view another person's screen in my computer:
+
+* The most basic solution I can think of for this feature alone is
+OBS - https://obsproject.com/ , https://github.com/obsproject/obs-studio .
+It can capture your screen, and stream it to streaming services like
+YouTube, Twitch and more! It can also capture your audio, video too!
+It's like the perfect thing for webinars / virtual meetups. You can
+also do some processing for your video - add banners and all, and do
+things like noise cancellation for your audio. Those are the features
+that it has
+
+
+* Another way to share your screen, and also do audio/video calls is
+using WebRTC - https://webrtc.org/
+
+https://en.wikipedia.org/wiki/WebRTC
+https://webrtc.github.io/webrtc-org/
+https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API
+https://www.html5rocks.com/en/tutorials/webrtc/basics/
+https://www.youtube.com/watch?v=BVBXkzVjvPc
+https://www.npmjs.com/package/simple-peer
+https://www.youtube.com/watch?v=aVgH-mVdS6s
+https://www.youtube.com/watch?v=PT8s_IVWDgw
+https://www.youtube.com/watch?v=g1GG7kT46l4
+Names: "Feross Aboukhadijeh"
+https://www.youtube.com/watch?v=2qrUx-C5Np4
+https://www.youtube.com/watch?v=kxHRATfvnlw
+https://www.youtube.com/user/FreeTheFeross
+https://www.youtube.com/watch?v=aqnvKP1DYRI
+
+extension sample - https://chrome.google.com/webstore/detail/webrtc-control/fjkmabmdepjfammlpliljpnbhleegehm
+
+video chat sample - https://github.com/karuppiah7890/p2p-videochat .
+Not sure if it still works. 
+
+
+With WebRTC - things are lightweight is my guess. And it makes use of
+the well known platform - the browser. The browser runs on SO many
+devices. You just don't have to worry about cross platform!
+
+---
+
+
