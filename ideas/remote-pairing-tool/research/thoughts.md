@@ -244,7 +244,12 @@ that it has
 
 
 * Another way to share your screen, and also do audio/video calls is
-using WebRTC - https://webrtc.org/
+using WebRTC - https://webrtc.org/ . With WebRTC, you can also share
+random data with the other person - like chat or anything! With WebRTC,
+you can do screen share with multiple people, and also do audio and
+video calls with multiple people. Examples - appear.in , google meet.
+Also, in screen share, you can share your whole screen or just a
+particular window :)
 
 https://en.wikipedia.org/wiki/WebRTC
 https://webrtc.github.io/webrtc-org/
@@ -272,5 +277,37 @@ the well known platform - the browser. The browser runs on SO many
 devices. You just don't have to worry about cross platform!
 
 ---
+
+Be able to control the mouse and keyboard of the other person -
+
+Currently, for this, I have only tried Zoom. There are so many
+other tools that can help with this. I tried VS Code Live Share
+too recently actually. The experience was good. I mean, I was
+able to work with my friend well within the VS Code Editor - more like
+a sandboxed environment than be able to have access to the
+whole computer. My friend was able to edit a file with me.
+She was able to independently edit the document with her
+own cursor and I was also independently able to edit
+the document. So, multiple cursor support was cool, and
+yes, the keyboard support too. And my friend was also
+able to get access to the bash terminal and type into
+that too! It was cool :)
+
+There are other tool too! Like tuple.app
+
+---
+
+Be able to video chat with the person
+
+WebRTC, Zoom, Google Meet, appear.in, Google Duo and so many more
+
+---
+
+Be able to text chat with the person
+
+Slack, Google Chat, WhatsApp, FB messenger, Signal App, and so many more
+
+---
+
 
 
