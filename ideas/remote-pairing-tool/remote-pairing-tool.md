@@ -25,6 +25,9 @@ sometime I guess. More links - https://github.com/GitLiveApp
 9. [Jitsi](https://jitsi.org/jitsi-meet/) - Open Source Video conferencing. Has
 some desktop sharing solution too. Links - https://github.com/jitsi .
 Looks cool. Could learn from them, or reuse their components. Looks cool!
+8. [Around App](https://www.around.co/) - This just has screen sharing along with
+video. I don't think it has remote control of mouse and keyboard
+
 
 There might be more. I guess I'll do more of my research on it sooner or later.
 I also like to see the story behind services and tools, even though they may

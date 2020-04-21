@@ -108,3 +108,52 @@ YouTube. Source code - https://github.com/obsproject/obs-studio
     https://beakerbrowser.com , https://github.com/beakerbrowser/beaker .
     Check these good links to understand if peer to peer (p2p) protocols,
     techniques and technologies can help ! :)
+
+
+---
+
+Discussion with a colleague while trying out things
+
+VS Code Live Share
+
+connects to a server. microsoft servers
+
+---
+
+OBS - show my screen to someone else
+
+separate app - remote mouse and keyboard
+control
+
+zoom: transmit it as an image. 
+
+vs code : just update the diff in each file.
+it doesn't render.
+
+difference between full screen share, versus
+in-app data and render it with client
+intelligence
+
+in case of vs code it's a lot better.
+
+zoom - your keystrokes to the other
+person's machine. remote keyboard control.
+
+keystrokes - cumbersome. lot of the
+keyboard shortcuts could be system shortcuts
+
+around - a tool. startup. focussed work.
+not very intrusive. 
+
+end users - developers?
+
+extend to creators?
+
+native support - possible?
+
+platform / app should support plugins
+
+or else piggyback with tools like zoom,
+which works on full system - less secure.
+
+---
