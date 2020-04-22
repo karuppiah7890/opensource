@@ -209,8 +209,7 @@ someone could tap into our communication or hack our computers
 and do remote control and remote code execution. Security
 must be tight to NOT allow intruders. And all communications
 must be encrypted end to end, so that no one can tap it in
-between. 
-13. Even the servers helping me to communicate should NOT
+between. Even the servers helping me to communicate should NOT
 know what I'm communicating and also, it should NOT know
 who I'm communicating with. Ideally it should NOT know
 anything and just help to communicate with the other person.
@@ -218,12 +217,12 @@ This way, if someone hacks the server, they cannot know who
 I communicated with and collaborated with and so on. The idea
 is to keep the server as dumb as possible - without too much
 data, but just enough to help serve the users.
-14. Be able to host the servers myself given a documentation.
+13. Be able to host the servers myself given a documentation.
 Be able to host it very well and maintain it too, very
 easily.
-15. Be able to upgrade all the softwares - client and servers,
+14. Be able to upgrade all the softwares - client and servers,
 very easily with no downtime.
-16. Be able to tell metrics regarding my communication with
+15. Be able to tell metrics regarding my communication with
 the other person - like the lag details, Internet bandwidth
 being used. Any metrics that the user can see to understand
 problems in any case any occurs or to just know some speed
@@ -309,5 +308,18 @@ Slack, Google Chat, WhatsApp, FB messenger, Signal App, and so many more
 
 ---
 
+Terminal Sharing based on tmux - https://tmate.io
 
+---
 
+MacOS `Screen Sharing` app for sharing 
+screen. Native App. It also has support
+for remote mouse control and keyboard
+control I believe.
+
+---
+
+Technologies - Virtual Network Computing
+(VNC); Remote Framebuffer (RFB) protocol;
+
+---
