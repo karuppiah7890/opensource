@@ -183,3 +183,22 @@ Swift though. For the controller part. And it would be nice to know how to
 listen to inputs too. And see what magic I can do with Swift code, compared to
 ElectronJS and others. For now I'll stick to ElectronJS and make it work first!
 
+---
+
+ElectronJS is really really cool! I just saw some demos of it's really cool
+features using a demo app of theirs
+
+https://github.com/electron/electron-api-demos/releases
+
+And I also tried a quick quick-start thing :P
+
+```
+# Clone the Quick Start repository
+$ git clone https://github.com/electron/electron-quick-start
+
+# Go into the repository
+$ cd electron-quick-start
+
+# Install the dependencies and run
+$ npm install && npm start
+```
