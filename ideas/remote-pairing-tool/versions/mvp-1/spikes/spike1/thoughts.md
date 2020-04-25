@@ -157,3 +157,29 @@ at least a bit. It just looks like - as usual I'm beating around the bush.
 Need to learn some basics for the code I have read till now.
 
 
+--
+
+OH MY GOD. Okay. So, according to my architecture, this whole thing is part
+of the Remote UI, which is responsible for capturing the mouse and keyboard
+events! DAMN! I completely forgot about it 🙈 I mean, this is important
+information because - I was planning to create a cross platform Remote GUI.
+In the above solution - I was making more of a OS specific solution. So, yeah.
+May be the next thing to do is - for now, stick to cross platform! :D :) 
+So, I think I'll try ElectronJS framework. I remember checking out about it's
+mouse event docs. I checked it out again now. This is the one
+
+https://www.electronjs.org/docs
+https://www.electronjs.org/docs/api/structures/mouse-input-event
+https://www.electronjs.org/docs/api/structures/mouse-wheel-input-event
+
+And it also has keyboard events stuff for the future -
+
+https://www.electronjs.org/docs/tutorial/keyboard-shortcuts
+https://www.electronjs.org/docs/api/structures/keyboard-event
+https://www.electronjs.org/docs/api/structures/keyboard-input-event
+
+Damn it. I can't believe I spent so much time on the above. I do have to learn
+Swift though. For the controller part. And it would be nice to know how to
+listen to inputs too. And see what magic I can do with Swift code, compared to
+ElectronJS and others. For now I'll stick to ElectronJS and make it work first!
+
