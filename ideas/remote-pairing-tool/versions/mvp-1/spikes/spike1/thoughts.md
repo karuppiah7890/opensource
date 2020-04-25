@@ -72,6 +72,7 @@ https://developer.apple.com/documentation/coregraphics/1455258-cgdisplaymovecurs
 So, I tracked back from there to this place
 
 https://developer.apple.com/documentation/coregraphics/quartz_display_services
+https://developer.apple.com/documentation/coregraphics/quartz_display_services#1656828
 
 There's a section called `Controlling the Mouse Cursor` here! And there's this
 thing called `CGGetLastMouseDelta()`
@@ -88,4 +89,71 @@ I think I'll be checking this out
 https://developer.apple.com/documentation/appkit/nsevent/1532495-mouseevent
 
 Let's see how that goes!
+
+I also checked this
+
+https://duckduckgo.com/?q=obtain+mouse+location+in+macos&t=ffab&ia=web
+
+Okay, so
+
+https://developer.apple.com/documentation/appkit/nsevent/1532495-mouseevent
+
+looks like creation of a mouse event. I think we need to "capture events" and
+not create them. So, I saw this thing -
+
+https://developer.apple.com/documentation/appkit/nsevent#1652040
+
+Looks like the events are captured at our app window level or global level. I think
+we should do our app window level - I mean, we should capture mouse events only in our
+program and then use them to control the other user's program. This way, when
+the user is focussed on another application, they can still focus on it,
+without disrupting the other user's computer by controlling their screen,
+and that's totally not intuitive and looks crazy and surely it will be
+unintentional controlling by the user. 
+
+So, seems like we do need an application with some GUI. Hmm. Let's still try
+to use some code here and see if it works as a CLI application. Hmm
+
+https://developer.apple.com/documentation/appkit/nsevent/1534971-addlocalmonitorforevents
+
+So, I saw this answer
+
+https://stackoverflow.com/questions/31931403/getting-mouse-coordinates-in-swift#31932049
+
+I noticed one thing. In all the docs - I was looking at AppKit. Apparently it's
+an old thing. Later came UI Kit I think? And the latest is Swift UI? But I can't
+seem to find if there's any new way to do things - to capture mouse events,
+other than the methods and functionality present in AppKit's NSEvent stuff.
+
+I tried to then put the AppKit code in Swift UI by checking this
+
+https://developer.apple.com/documentation/swiftui#3126401
+
+`User Interface` > `Framework Integration` section
+
+https://developer.apple.com/documentation/swiftui/framework_integration
+
+https://developer.apple.com/documentation/swiftui/framework_integration#3126390
+
+https://developer.apple.com/documentation/swiftui/nsviewcontrollerrepresentable
+
+I also looked at these links
+
+https://duckduckgo.com/?t=ffab&q=mouse+events+with+swift+ui+in+mac&ia=web
+
+https://duckduckgo.com/?t=ffab&q=appkit+vs+swift+ui&ia=web
+
+https://duckduckgo.com/?t=ffab&q=swift+protocols&ia=web
+
+https://docs.swift.org/swift-book/LanguageGuide/Protocols.html (protocol
+seems like interfaces in golang)
+
+I tried too hard, but it didn't work out. I still got tons to learn first. So,
+yeah. 
+
+I need to start understanding how these things work one by one - may be
+just enough - to make this work! So that I can understand what's possible
+at least a bit. It just looks like - as usual I'm beating around the bush.
+Need to learn some basics for the code I have read till now.
+
 
