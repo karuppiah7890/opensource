@@ -325,3 +325,12 @@ Technologies - Virtual Network Computing
 https://github.com/karuppiah7890/rfb-protocol
 
 ---
+
+If I'm building something like zoom, then in zoom - they actually hide the
+user's cursor and you can only see the other user's cursor. The UX goes
+like this "I think" (gotta double check) -
+
+I can see the screen of the other user. Once I click on it, the focus goes on
+it and my cursor disappears and then when I start moving my cursor, the other
+user's cursor moves.
+

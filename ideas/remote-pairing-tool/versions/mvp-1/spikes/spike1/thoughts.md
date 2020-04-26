@@ -6,6 +6,15 @@ when can't we? As usual explore a lot to checkout the unknown unknowns.
 
 ---
 
+Goals:
+1. Track mouse inside the app
+2. Track movement only when there's movement - do not poll please!
+3. Track absolute position and the difference between previous position
+and current position. More like dx and dy in math
+4. Check what is possible
+
+---
+
 Okay, so I've started with checking about how to capture the mouse "stuff"
 
 I remember seeing this thing called "Core Graphics"
@@ -202,3 +211,80 @@ $ cd electron-quick-start
 # Install the dependencies and run
 $ npm install && npm start
 ```
+
+I think this is going to be awesome! :D ;) 
+
+---
+
+Okay, I was trying to capture the mouse movement and it's position. I realized
+that the docs  I saw for mouse and keyboard events - they were type definitions
+🤦‍♂ and there was not any API to get that event. Instead there's one API to
+send event
+
+https://www.electronjs.org/docs/api/web-contents#contentssendinputeventinputevent
+https://www.electronjs.org/docs/api/webview-tag#webviewsendinputeventevent
+
+And then I saw some libraries related to mouse (just saw readme)
+
+https://github.com/gamedev-js/input.js
+https://github.com/eshkol/dragula
+https://github.com/wilix-team/iohook
+https://github.com/rpa-helpers/iohook-lib
+https://github.com/kapetan/electron-drag
+https://github.com/kapetan/osx-mouse
+
+I tried https://github.com/kapetan/osx-mouse and it looks really cool! It's able to track
+the mouse in the whole screen! But it's specific to OS X. Hmm. I think it's okay
+for now? To start with that is. We can check cross platform later
+
+I also checked some more npm packages. Seems like there are react based
+modules! For tracking mouse! Since I'm implementing with Electron which has
+web technologies - I could use that. Also, I want to track only inside the app.
+
+I checked some links
+
+https://www.npmjs.com/package/react-hook-mighty-mouse
+demo - https://mkosir.github.io/react-hook-mighty-mouse/?path=/story/react-mighty-mouse--flashlight
+
+that was really nice. Some more are below
+
+https://www.npmjs.com/package/@react-hook/mouse-position
+
+I went off track and saw some more cool stuff
+
+https://www.npmjs.com/package/proximity-effect
+http://adasha.com/lab/proximity-effect/
+http://adasha.com/lab/proximity-effect/1.html
+http://adasha.com/lab/proximity-effect/2.html
+http://adasha.com/lab/proximity-effect/3.html
+http://adasha.com/lab/proximity-effect/4.html
+http://adasha.com/lab/proximity-effect/5.html
+http://adasha.com/lab/proximity-effect/6.html
+
+Saw some more links 
+
+https://www.w3schools.com/jsref/event_onmousemove.asp
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmousemove
+
+https://www.w3schools.com/jsref/event_clientx.asp
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_mouse_screenxy_clientxy
+
+https://www.w3schools.com/jsref/dom_obj_event.asp
+
+---
+
+
+So I finally did changes to the code to find the absolute position and the
+difference in x,y coordinates too. In between I had to check how to make
+the height and width of the body match the browser height and width
+
+https://duckduckgo.com/?t=ffab&q=change+body+width+to+match+browser
+
+https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window?page=1&tab=votes#tab-top
+
+I finally used `100vh` for `height` and `100vw` for `width` and also had to
+put `margin` as `0` as there was some default `margin` of `8px` or something
+
+---
+
+

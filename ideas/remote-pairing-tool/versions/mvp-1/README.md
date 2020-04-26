@@ -4,7 +4,7 @@ High level features:
 
 1. Support for two users only
 2. One user can connect to another user's computer and
-control their mouse. 
+control their mouse. - Be able to just move their mouse
 
 Note: The user CANNOT see the other user's computer and cannot control
 their keyboard. That's out of scope.
