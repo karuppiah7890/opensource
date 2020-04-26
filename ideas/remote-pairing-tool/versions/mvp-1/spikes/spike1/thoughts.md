@@ -307,4 +307,108 @@ So, I need to create a grpc server in swift and a grpc client in js. Then
 the js in electron will send dx, dy data to swift grpc server and then the
 server will do the controller stuff ;) This is gonna be cool I guess :P :D
 
+---
+
+Okay, so, I tried to write a proto and do stuff. The links I followed are
+
+https://github.com/apple/swift-protobuf/
+https://swift.org/getting-started
+https://swift.org/getting-started/#using-the-package-manager
+
+I remember reading recently that swift can be run in other platforms?
+https://swift.org/about/#platform-support . That's cool!
+
+Also, apparently we don't need XCode to do Swift development. But idk how
+smooth it will be to do the development in a normal editor. XCode helps me
+with so much errros - or may be it's the swift compiler's fetaures that XCode
+uses. Idk. Gotta try some other editor for sure later
+
+I got the `protoc-gen-swift` binary using homebrew
+
+```
+$ brew install swift-protobuf
+```
+
+I tried to import swift-protobuf package and for that I had to create a github token
+and add it to MacOS accounts and then search the package in a UI? And it
+wouldn't even show proper results and I finally added the swift-protobuf
+package and to the target. Apparently there's a doc for it too
+https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app
+but I just managed it all by myself!
+
+I also auto generated the swift file from proto using this
+
+```
+$ protoc --swift_out=. protos/MousePoint.proto
+```
+
+And before all this, I also created a directory called `protos` and that was
+one hell of a ride :P I created something called a `group` and then later
+moved that inside the main project directory as it was previously outside.
+Anyways, finally, I'm able to create a value of struct of the message type `MousePoint`
+that I created, that is, auto generated from the proto file ! :D
+
+btw, I was able to get help info from `protoc-gen-swift` using this
+
+```
+$ protoc-gen-swift -h
+```
+
+and also check it's version!
+
+```
+$ protoc-gen-swift --version
+protoc-gen-swift 1.8.0
+```
+
+---
+
+Next I gotta check these links
+
+https://github.com/grpc/grpc-swift
+https://github.com/grpc/grpc-swift/blob/master/docs/quick-start.md
+
+I got the grpc plugin for swift using this
+
+```
+$ brew install grpc-swift
+```
+
+but this installs `protoc-gen-swiftgrpc` and the repo says the name is
+`protoc-gen-grpc-swift`. Might have to change the name if it doesn't work out
+later!
+
+
+---
+
+All in all, some learnings:
+1. I could really use some pre-installed binaries - and these exist in homebrew
+but github repos are not mentioning them always
+2. I could really try swift in VS Code or some other editor and do the building
+and running and everything like package managing in the terminal. Not sure
+how the experience would be - like in terms of - will it give me good errors
+like something is not defined and how to automatically fix it with just a
+button, and then also say "this has been replaced with this new thing" so that
+I can use the new thing. Those are some good features I noticed in XCode, not
+sure if it's XCode specific. Gotta see if other editors have plugins for
+Swift and provide good UI/UX. Surely I don't want to be so stuck with XCode.
+Damn I had to spend so much time to understand how to add a package
+3. Of course I need to learn swift programming language. I am so so bad at it,
+because I don't know a thing in it. I'm just making things work. Just making
+things work. I haven't learn much at all!! 🙈 More like nothing. learned nothing!
+4. Swift has REPL mode! Cool stuff!
+5. Swift has some cool features like
+
+```
+$ swift run <swift-file>
+```
+
+Actually, the above is deprecated it seems. Instead we can use
+
+```
+$ swift <swift-file>
+```
+
+That's all for now I guess...
+
 
