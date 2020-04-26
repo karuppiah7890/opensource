@@ -287,4 +287,24 @@ put `margin` as `0` as there was some default `margin` of `8px` or something
 
 ---
 
+Okay, so I was able to get the current location of the mouse in swift and was
+also able to move the mouse! :D Current location was needed so that I can move
+it to the correct absolute position by adding the dx and dy to the current
+location, so it's like
+
+(x, y) initially and then (x + dx, y + dy)
+
+where we get dx and dy through grpc. Currently I'm planning to put in the
+grpc, the networking component, along with controller or the remote UI. Not yet
+doing separate components. I want to see how this goes and later think on the
+pros and cons of each. I mean, if it's a separate program - that will be more
+like a proxy in front of the remote UI or controller. And I also need to see
+how to do inter process communication between two processes in the same machine.
+To avoid that hassle - planning to join the features for now. Let's see how
+that goes :P
+
+So, I need to create a grpc server in swift and a grpc client in js. Then
+the js in electron will send dx, dy data to swift grpc server and then the
+server will do the controller stuff ;) This is gonna be cool I guess :P :D
+
 
