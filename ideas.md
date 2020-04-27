@@ -32,3 +32,5 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 13. [sidestack.com](ideas/sidestack/readme.md) - My Own company
 
 14. [custom-edit-text-with-tagging-in-android](ideas/custom-edit-text-with-tagging-in-android/readme.md)
+
+15. [approaching-a-problem](ideas/approaching-a-tech-problem/readme.md)

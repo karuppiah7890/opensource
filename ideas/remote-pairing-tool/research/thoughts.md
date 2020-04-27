@@ -334,3 +334,25 @@ I can see the screen of the other user. Once I click on it, the focus goes on
 it and my cursor disappears and then when I start moving my cursor, the other
 user's cursor moves.
 
+---
+
+Should have looked for research papers long ago. 🙈
+
+research papers:
+
+"Evaluating Tools that Support Pair Programming in a Distributed Engineering
+Environment":
+https://www.researchgate.net/publication/228555194_Evaluating_Tools_that_Support_Pair_Programming_in_a_Distributed_Engineering_Environment
+
+
+"Distributed Pair Programming: A Survey"
+https://www.ijert.org/research/distributed-pair-programming-a-survey-IJERTV3IS080002.pdf
+
+
+"Jazz Sangam: A Real-Time Tool for Distributed Pair Programming on a Team Development Platform"
+https://collaboration.csc.ncsu.edu/laurie/Papers/irecose2008_12.pdf
+
+
+"Remote Pair Programming in a Visual Programming Language"
+https://www2.eecs.berkeley.edu/Pubs/TechRpts/2015/EECS-2015-139.pdf
+
