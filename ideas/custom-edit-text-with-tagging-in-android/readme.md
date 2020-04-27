@@ -34,3 +34,30 @@ it :P ;) It would be so cool! ;) Since idk anything
 about Android now. I would learn a thing or two then!
 
 
+---
+
+I have previously done auto complete stuff for search using
+this https://api.jqueryui.com/autocomplete/
+
+---
+
+custom views - https://www.raywenderlich.com/142-android-custom-view-tutorial
+
+https://www.zoftino.com/android-autocompletetextview-custom-layout-and-adapter
+
+---
+
+Raise an issue in socialview repo
+and ask them to include this
+
+```
+android:windowSoftInputMode="adjustPan|adjustResize"
+```
+
+in example activity in the manifest. so
+that when input
+box is at the bottom of the screen,
+the suggestions still show up above
+the box! :)
+
+
