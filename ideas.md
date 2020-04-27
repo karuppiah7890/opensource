@@ -30,3 +30,5 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 12. [GetStream clone](ideas/getstream-clone/readme.md)
 
 13. [sidestack.com](ideas/sidestack/readme.md) - My Own company
+
+14. [custom-edit-text-with-tagging-in-android](ideas/custom-edit-text-with-tagging-in-android/readme.md)
