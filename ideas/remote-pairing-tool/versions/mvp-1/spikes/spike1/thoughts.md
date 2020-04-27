@@ -420,3 +420,71 @@ https://github.com/grpc/grpc-swift/blob/master/docs/quick-start.md
 
 Still writing the code for it!
 
+---
+
+1. implement the server using the auto generated code
+2. start the server
+3. auto generate some swift client code or golang client code
+4. call the server
+5. call the server multiple times
+6. see if you can change the input from single input to a stream input
+7. how long can a service method be called? so that we can stream input
+for a looooong time. check this. or else we will have to send mouse points
+over multiple service method calls
+
+---
+
+So, I got this error about `CgRPC` module missing. It was weird and I checked
+swift grpc and it had `CgRPC` in it's `Package.swift`. Later, I ran build and
+then tons of errors compared to before. Now I see that the `CgRPC` module
+has not been imported - due to multiple failures. It said something about
+
+```
+/Users/karuppiahn/Library/Developer/Xcode/DerivedData/controller-demo-bdfitjjlaospwpanjeouafyvtbhr/SourcePackages/checkouts/grpc-swift/Sources/CgRPC/include/src/core/tsi/ssl/session_cache/ssl_session.h:29:1: Import of C++ module 'BoringSSL' appears within extern "C" language linkage specification
+```
+
+And there were multiple such messages for multiple locations. Most of them had
+the above as heading. I need to see how to fix it 🙈
+
+So, I'm getting tons of errors and I'm also getting a warning about one library
+`libnghttp2` and that it can be installed using `brew` with
+
+```
+$ brew install nghttp2
+```
+
+I just installed it. I think I need to update my `PATH` environment variable
+too now
+
+Actually, the errors didn't go away. I then updated `PATH` environment
+variable 
+
+```
+echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile
+```
+
+and removed the old statement I had for `openssl` and then I restarted XCode
+and it worked!! :D 
+
+I think it was something related to `openssl` and the `BoringSSL` module? Idk.
+Anyways. Now. There are new errors! LOL 😆
+
+Okay, so, I think I messed up something with respect to the accessor stuff.
+Like private, public and all. So, initially I ran small `protoc` commands. Later
+I updated it to include some more stuff, for example something about visibility
+and made it public. But looks like I didn't make it public everywhere! Now,
+I get this error
+
+```
+/Users/karuppiahn/oss/github.com/karuppiah7890/controller-demo/controller-demo/protos/Controller.grpc.swift:38:8: Method cannot be declared public because its parameter uses an internal type
+```
+
+And I get this error all over the place in my generated file - in 7 places,
+where the code for the message type has been referred to. I think I need to
+regenerate that code alone with public or do something else :P May be make
+everything private or internal in this case :P I really need to learn swift!!!
+
+Okay, I ran `protoc` commands to generate the code with public and everthing.
+Now the old `BoringSSL` error has creeped back!! 🙈:/ Gotta check back later! 
+
+---
