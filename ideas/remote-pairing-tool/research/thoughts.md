@@ -356,3 +356,13 @@ https://collaboration.csc.ncsu.edu/laurie/Papers/irecose2008_12.pdf
 "Remote Pair Programming in a Visual Programming Language"
 https://www2.eecs.berkeley.edu/Pubs/TechRpts/2015/EECS-2015-139.pdf
 
+---
+
+Everyone is very concerned about security of remote pairing tools,
+video and audio conferencing software too! It makes sense, especially
+for companies who data is sensitive and also, for individuals who are
+very very serious about their privacy and security.
+
+Whatever I build, I need to consider security too in the architecture and
+also look for loop holes in all the places. Do security audits with some
+hackers ;)
