@@ -488,3 +488,263 @@ Okay, I ran `protoc` commands to generate the code with public and everthing.
 Now the old `BoringSSL` error has creeped back!! 🙈:/ Gotta check back later! 
 
 ---
+
+Okay, so to ditch all the above issues, I think I'm going to use the latest
+and greatest of the grpc-swift repo - 1.0.0 alpha release. I'm already doing
+this and I noticed another issue. I forgot that I need to also use the same
+version's binary and not an older version. Let me get the latest version
+of the binary by building it from source
+
+Did this -
+
+```
+$ # went into grpc-swift repo directory
+$ gco '1.0.0-alpha.11'
+$ make plugins
+$ ./protoc-gen-swift --version
+protoc-gen-swift 1.8.0
+$ mv protoc-gen-grpc-swift /usr/local/bin/protoc-gen-grpc-swift
+```
+
+So, the `protoc-gen-swift` binary was good - I already had the latest, the
+same as here, I just moved the `protoc-gen-grpc-swift` to overwrite the existing
+binary. Let's get moving ;)
+
+Okay. So, I regenerated the code using the new binary
+
+```
+$ protoc --grpc-swift_out=controller-demo/protos/ --grpc-swift_opt=Visibility=Public     --proto_path=controller-demo/protos/ controller-demo/protos/Controller.proto
+```
+
+using the docs in my readme ;) and it all just worked - for a secondst the code
+was not updated in XCode but later it got updated and then my build also ran
+successfully ;) :D 
+
+Okay. So, I copy pasted some code from these guides
+
+https://github.com/grpc/grpc-swift/blob/master/docs/quick-start.md
+https://github.com/grpc/grpc-swift/tree/master/Sources/Examples/RouteGuide
+https://github.com/grpc/grpc-swift/blob/master/Sources/Examples/RouteGuide/Server/main.swift
+
+Okay, so, now my server is runnnnning! :D :D It says
+
+```
+server started on port 61308
+```
+
+Now, I'm going to auto generate some golang code and see how to call this
+server from the golang code! :)
+
+So, I did this
+
+```
+$ protoc --go_out=controller-demo/protos/ \
+    --proto_path=controller-demo/protos/ controller-demo/protos/MousePoint.proto
+
+$ protoc --go_out=controller-demo/protos/ \
+    --proto_path=controller-demo/protos/ controller-demo/protos/Controller.proto
+```
+
+And that generated golang code in the repo. I started moving this to another
+repo
+
+I had to make some changes - for example rename the package in both the
+generated files in the new project and also move them into a directory.
+
+Looking at this now
+
+https://github.com/grpc/grpc-go/tree/master/examples
+
+And this file
+
+https://github.com/grpc/grpc-go/blob/master/examples/helloworld/greeter_client/main.go
+
+Okay, I think I should be using this module
+
+https://pkg.go.dev/mod/google.golang.org/protobuf
+
+and not
+
+https://github.com/golang/protobuf
+
+So, gonna do just that! including the code generation by my old protoc-gen-go
+binary! 🙈
+
+Using this to get the latest binary 
+
+```
+$ go get -u -v github.com/protocolbuffers/protobuf-go/cmd/protoc-gen-go
+```
+
+Okay, that failed with
+
+```
+../../../../go/src/github.com/protocolbuffers/protobuf-go/cmd/protoc-gen-go/main.go:21:2: use of internal package google.golang.org/protobuf/internal/version not allowed
+```
+
+So, I'm going to clone the code I think. Oh wait. They provide the binaries
+in their releases! Yay! :)
+
+https://github.com/protocolbuffers/protobuf-go/releases
+
+https://github.com/protocolbuffers/protobuf-go/releases/tag/v1.21.0
+
+https://github.com/protocolbuffers/protobuf-go/releases/download/v1.21.0/protoc-gen-go.v1.21.0.darwin.amd64.tar.gz
+
+```
+$ mv ~/Downloads/protoc-gen-go /usr/local/bin/
+$ # as mac wouldn't allow the binary
+$ sudo xattr -d com.apple.quarantine /usr/local/bin/protoc-gen-go
+```
+
+So, now I'm getting this error
+
+```
+$ protoc --go_out=controller-demo/protos/     --proto_path=controller-demo/protos/ controller-demo/protos/Controller.proto
+2020/04/30 21:37:17 WARNING: Missing 'go_package' option in "MousePoint.proto", please specify:
+        option go_package = ".;MousePoint";
+A future release of protoc-gen-go will require this be specified.
+See https://developers.google.com/protocol-buffers/docs/reference/go-generated#package for more information.
+
+2020/04/30 21:37:17 WARNING: Missing 'go_package' option in "Controller.proto", please specify:
+        option go_package = ".;Controller";
+A future release of protoc-gen-go will require this be specified.
+See https://developers.google.com/protocol-buffers/docs/reference/go-generated#package for more information.
+
+protoc-gen-go: Go package "." has inconsistent names MousePoint (MousePoint.proto) and Controller (Controller.proto)
+--go_out: protoc-gen-go: Plugin failed with status code 1.
+```
+
+I'm gonna do what's mentioned here
+
+https://developers.google.com/protocol-buffers/docs/reference/go-generated#package
+
+which is mention an `option` like
+
+```
+option go_package = "example.com/foo/bar";
+```
+
+in my case
+
+```
+option go_package = "github.com/karuppiah7890/controller-demo-golang-client";
+```
+
+Now it says this
+
+```
+2020/04/30 21:43:00 WARNING: Malformed 'go_package' option in "MousePoint.proto", please specify:
+        option go_package = "github.com/karuppiah7890/controller-demo-golang-client;controller_demo_golang_client";
+A future release of protoc-gen-go will reject this.
+See https://developers.google.com/protocol-buffers/docs/reference/go-generated#package for more information.
+```
+
+Oh. I see it. Package names cannot have hyphens. Oops. Let me change that. I
+initially fixed it with it told me
+
+```
+option go_package = "github.com/karuppiah7890/controller-demo-golang-client;controller_demo_golang_client";
+```
+
+I changed it to this
+
+```
+option go_package = "github.com/karuppiah7890/controller-demo-golang-client/controller";
+```
+
+Now, it's all good. I think I'm even going to commit it to the repo. Just like that.
+
+```
+$ protoc --go_out=controller-demo/protos/     --proto_path=controller-demo/protos/ controller-demo/protos/Controller.proto
+$ protoc --go_out=controller-demo/protos/     --proto_path=controller-demo/protos/ controller-demo/protos/MousePoint.proto
+```
+
+I copied the code to the other repo. Trying to write the code now
+
+Okay, after seeing the code, I just realized I made one mistake. I didn't
+generate any grpc related code for rpc method. Only protobuf related code for
+message type. Gotta fix that first!
+
+Oh. So I tried this and it said to use something else
+
+```
+$ protoc --go_out=plugins=grpc:controller-demo/protos/     --proto_path=controller-dem
+o/protos/ controller-demo/protos/Controller.proto
+--go_out: protoc-gen-go: plugins are not supported; use 'protoc --go-grpc_out=...' to generate gRPC
+```
+
+Looks like the days are changing. Need to update my grpc demo here
+https://github.com/karuppiah7890/grpc-demo/
+
+Anyways. 
+
+```
+$ protoc --go-grpc_out=controller-demo/protos/     --proto_path=controller-demo/prot
+os/ controller-demo/protos/Controller.proto
+protoc-gen-go-grpc: program not found or is not executable
+Please specify a program using absolute path or make sure the program is available in your PATH system variable
+--go-grpc_out: protoc-gen-go-grpc: Plugin failed with status code 1.
+```
+
+Of course there's no `protoc-gen-go-grpc`. I need to see how this is done. From
+what I remember, golang has only one plugin for protobuf stuff, unlike what I
+saw for swift. Let me check what's going on
+
+Checking this now
+
+https://grpc.io/docs/quickstart/go/
+
+Hmm. They say the same thing that I did before
+
+https://grpc.io/docs/quickstart/go/#regenerate-grpc-code
+
+Using the `--go_out=plugins=grpc:<abcd>`. That's weird
+
+Okay. I did a cool move. Lol
+
+```
+$ cp /usr/local/bin/protoc-gen-go /usr/local/bin/protoc-gen-go-grpc
+```
+
+Or should I say cool copy? :P XD And it worked!
+
+```
+$ protoc --go-grpc_out=controller-demo/protos/     --proto_path=controller-demo/protos/ controller-demo/protos/Controller.proto
+```
+
+Wait. But. No change in code. Okay. may be it didn't work. Gotta check why
+later. Hmm. Damn. Didn't think my server would run and I would get stuck up
+with auto generation of grpc client code for golang!!! Really, software
+never ceases to surprise me!
+
+Okay, quite some places are telling me to use a different `protoc-gen-go`
+binary
+
+https://grpc.io/docs/quickstart/go/#protocol-buffers
+
+https://github.com/grpc/grpc-go/tree/master/examples#optional---rebuilding-the-generated-code
+
+So, I'm doing this
+
+```
+$ rm -rfv /usr/local/bin/protoc-gen-go*
+$ go get -u -v github.com/golang/protobuf/protoc-gen-go
+```
+
+WOWOOWOWOW! That just worked!!
+
+```
+$ protoc --go_out=plugins=grpc:controller-demo/protos/     --proto_path=controller-demo/protos/ controller-demo/protos/Controller.proto
+```
+
+And this time there was code change!!! :) :D
+
+```
+$ cp -r controller-demo/protos/github.com/karuppiah7890/controller-demo-golang-client/controller/ ../controller-demo-golang-client/controller/
+```
+
+And I wrote the code and ran the client with the server's port as input
+and it all worked!! :D :D The mouse moved!! :D 
+
+Demo : https://youtu.be/vH3cOqMJzo0
