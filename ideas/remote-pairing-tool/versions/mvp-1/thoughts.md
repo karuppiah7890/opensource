@@ -51,3 +51,12 @@ What's possible and what's not possible? Does one need a blank window to
 capture a mouse? Can it be done with no windows? That is, no GUI, at all.
 What are the limits to capturing the mouse's actions? When can we do it and
 when can't we? As usual explore a lot to checkout the unknown unknowns.
+
+Check [spike thoughts](./spikes/spike1/thoughts.md)
+---
+
+After the above spike, I have a lot of code already ready. Now, I'm just
+trying to modify the electron app so that it can contact the swift server
+and is able to move the mouse. Then I'll try it with my friend may be, over
+the Internet
+

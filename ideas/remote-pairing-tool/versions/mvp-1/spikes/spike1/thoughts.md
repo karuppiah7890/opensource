@@ -748,3 +748,21 @@ And I wrote the code and ran the client with the server's port as input
 and it all worked!! :D :D The mouse moved!! :D 
 
 Demo : https://youtu.be/vH3cOqMJzo0
+
+For now I'm going to check how to call this from the electron app in nodejs
+
+https://grpc.io/docs/tutorials/basic/node/
+
+Also, I checked what happens when the grpc service method is called multiple
+times - it works quite fine. May be I'll think more about the performance
+and stuff later. For now a single method call moves the mouse once - the method
+takes just one input. Later it could turn into a stream. Also, things could be
+optimized - if the mouse moves too fast, not all the points needs to be given,
+may be half of the points of the path or the diff - or like something of that
+sort. Just a thought
+
+---
+
+Okay, actually, the spike has been over for a long time now and I just
+continued on the MVP after that. And wrote down the thoughts here itself.
+Gonna continue [here](../../thoughts.md)
