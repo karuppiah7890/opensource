@@ -253,3 +253,39 @@ I used this to understand the keys inside the object
 Wow. I was able to write the code and connect to it and move the mouse too
 by contacting the swift grpc server!!! :D :D :D 
 
+Now, I had to copy paste code from the nodejs client to my remote-ui app
+(eletron app) and I replaced package-lock.json with yarn.lock over there
+too. Now, with all the code inside, I'm seeing if anything works, but the
+console is giving me this error
+
+```
+Uncaught Error: Failed to load gRPC binary module because it was not installed for the current system
+Expected directory: electron-v8.2-darwin-x64-unknown
+Found: [node-v72-darwin-x64-unknown]
+This problem can often be fixed by running "npm rebuild" on the current system
+Original error: Cannot find module '/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/node/extension_binary/electron-v8.2-darwin-x64-unknown/grpc_node.node'
+Require stack:
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/grpc_extension.js
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/client_interceptors.js
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/client.js
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/index.js
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/index.html
+    at Object.<anonymous> (/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/grpc_extension.js:53)
+    at Object.<anonymous> (/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/grpc_extension.js:64)
+    at Module._compile (internal/modules/cjs/loader.js:968)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:986)
+    at Module.load (internal/modules/cjs/loader.js:816)
+    at Module._load (internal/modules/cjs/loader.js:728)
+    at Module._load (electron/js2c/asar.js:717)
+    at Function.Module._load (electron/js2c/asar.js:717)
+    at Module.require (internal/modules/cjs/loader.js:853)
+    at require (internal/modules/cjs/helpers.js:74)
+```
+
+Gotta work on it and fix it! :) And then I'll be good to try it out over the
+Internet. Hopefully in the mean time no one will hack things. But I can
+see my mouse movements, so let's hope I can find out just in case anyone
+messed with my system while doing the trial with my friends
+
+
+
