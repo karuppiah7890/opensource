@@ -287,5 +287,163 @@ Internet. Hopefully in the mean time no one will hack things. But I can
 see my mouse movements, so let's hope I can find out just in case anyone
 messed with my system while doing the trial with my friends
 
+Okay, after reading some links
 
+https://duckduckgo.com/?q=expected+electron-v8.2-darwin-x64-unknown+Found%3A+%5Bnode-v72-darwin-x64-unknown%5D&t=ffab&ia=web
+https://github.com/nodejs/node-gyp/issues/1599
+https://github.com/grpc/grpc-node/issues/594
+https://docs.npmjs.com/cli/rebuild
+https://duckduckgo.com/?t=ffab&q=npm+rebuild+for+electron&ia=web
+https://www.npmjs.com/package/electron-rebuild
+https://www.electronjs.org/docs/tutorial/using-native-node-modules
+https://duckduckgo.com/?t=ffab&q=Expected+directory%3A+electron-v8.2-darwin-x64-unknown
+https://stackoverflow.com/questions/55144432/how-do-i-install-grpc-for-electron-version-4-0-x
+https://duckduckgo.com/?t=ffab&q=grpc+in+electron&ia=web
+https://stackoverflow.com/questions/40265877/using-grpc-in-electron
+
+I finally was able to get rid of the above error by doing this
+
+```
+$ ls node_modules/grpc/src/node/extension_binary/node-v72-darwin-x64-unknown/grpc_node.node
+$ # the above is what is present.
+$ # but no electron directory is present. which is
+$ # what my electron app is looking for.
+$ # so I did this
+$ yarn add -D electron-rebuild
+$ npx electron-rebuild
+$ ls node_modules/grpc/src/node/extension_binary/
+$ ls node_modules/grpc/src/node/extension_binary/electron-v8.2-darwin-x64-unknown/grpc_node.node
+```
+
+So, that error is gone. Now I have a new error. Lol 😂
+
+```
+Uncaught TypeError: Cannot read property 'readFileSync' of null
+    at fetch (/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/@grpc/proto-loader/node_modules/protobufjs/src/root.js:162)
+    at Root.load (/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/@grpc/proto-loader/node_modules/protobufjs/src/root.js:196)
+    at Root.loadSync (/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/@grpc/proto-loader/node_modules/protobufjs/src/root.js:237)
+    at Object.loadSync (/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/@grpc/proto-loader/node_modules/protobufjs/src/index-light.js:69)
+    at Object.<anonymous> (/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/@grpc/proto-loader/build/src/index.js:230)
+    at Object.<anonymous> (/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/@grpc/proto-loader/build/src/index.js:235)
+    at Module._compile (internal/modules/cjs/loader.js:968)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:986)
+    at Module.load (internal/modules/cjs/loader.js:816)
+    at Module._load (internal/modules/cjs/loader.js:728)
+
+---
+
+DevTools failed to parse SourceMap: file:///Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/@grpc/proto-loader/build/src/index.js.map
+```
+
+Now, I gotta see what's wrong here. For now I can see that the proto file paths
+are good, using `console.log()`s
+
+Saw these links
+
+https://github.com/protobufjs/protobuf.js/blob/4ecfbcedaa4a9a85b9e896f38608519643390db4/src/root.js#L162
+https://github.com/protobufjs/protobuf.js/blob/4ecfbcedaa4a9a85b9e896f38608519643390db4/src/util.js#L22
+https://duckduckgo.com/?t=ffab&q=fs+in+electron&ia=web
+https://stackoverflow.com/questions/37994441/how-to-use-fs-module-inside-electron-atom-webpack-application#38021584
+
+
+Okay, I think may be the issue is that - the `fs` module is not available
+to the js code. I moved the code to the main process `index.js` and it worked!
+Initially the code was being run inside the windows's JS file. Not sure if the
+electron rebuild thing is still needed. Need to check that out! 
+
+To check that, I did this
+
+```
+$ mv node_modules/grpc/src/node/extension_binary/electron-v8.2-darwin-x64-unknown/grpc_node.node node_modules/grpc/src/node/extension_binary/electron-v8.2-darwin-x64-unknown/grpc_node.node.bak
+```
+
+and then ran and got these errors in a error window and in the console too
+
+```
+Uncaught Exception:
+Error: Failed to load /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/node/extension_binary/electron-v8.2-darwin-x64-unknown/grpc_node.node. Cannot find module '/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/node/extension_binary/electron-v8.2-darwin-x64-unknown/grpc_node.node'
+Require stack:
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/grpc_extension.js
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/client_interceptors.js
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/client.js
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/index.js
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/index.js
+- /Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js
+- 
+    at Module._resolveFilename (internal/modules/cjs/loader.js:798:15)
+    at Function../lib/common/reset-search-paths.ts.Module._resolveFilename (electron/js2c/browser_init.js:7620:16)
+    at Module._load (internal/modules/cjs/loader.js:691:27)
+    at Module._load (electron/js2c/asar.js:717:26)
+    at Function.Module._load (electron/js2c/asar.js:717:26)
+    at Module.require (internal/modules/cjs/loader.js:853:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/Users/karuppiahn/oss/github.com/karuppiah7890/remote-ui-app-demo/node_modules/grpc/src/grpc_extension.js:32:13)
+    at Module._compile (internal/modules/cjs/loader.js:968:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:986:10)
+```
+
+So, reverting my change! 
+
+```
+$ mv node_modules/grpc/src/node/extension_binary/electron-v8.2-darwin-x64-unknown/grpc_node.node.bak node_modules/grpc/src/node/extension_binary/electron-v8.2-darwin-x64-unknown/grpc_node.node
+```
+
+So, now, to make the whole thing work, I was thinking if I should just send
+the mouse point information from the browser js file to the main process
+and then from there send it to the grpc server!
+
+https://www.electronjs.org/docs/api/ipc-renderer#ipcrenderersendchannel-args
+https://www.electronjs.org/docs/api/ipc-main#ipcmainonchannel-listener
+
+https://www.electronjs.org/docs/api/ipc-main#sending-messages
+
+It's all asynchronous it seems. The only weird thing would be - if all the
+messages go out of order, it's gonna be a bit messed up :P
+
+Apparently there's an sync version for renderer - https://www.electronjs.org/docs/api/ipc-renderer#ipcrenderersendsyncchannel-args
+
+But it's warned that the renderer process will block. Of course. It's synchronous.
+
+Let's see how the async one goes ;) :D :)
+
+Okay, so I made the communication work! I logged the mouse point information
+in the main process
+
+```
+...
+{ sX: 578, sY: 322, sDx: 578, sDy: 322 }
+{ sX: 578, sY: 322, sDx: 0, sDy: 0 }
+{ sX: 579, sY: 322, sDx: 1, sDy: 0 }
+{ sX: 592, sY: 319, sDx: 13, sDy: -3 }
+{ sX: 605, sY: 318, sDx: 13, sDy: -1 }
+{ sX: 612, sY: 317, sDx: 7, sDy: -1 }
+{ sX: 615, sY: 317, sDx: 3, sDy: 0 }
+{ sX: 616, sY: 317, sDx: 1, sDy: 0 }
+...
+```
+
+I just didn't communicate the same with server, because, well, you know, it's
+like, my mouse, controlling itself o.O Let me try it though. It's gonna be weird!
+
+I got some really weird behavior. Of course. Also, given the fact that the
+server does not move the cursor based on absolute coordinates, and instead moves
+it based on relative positioning! :)
+
+Now I want to try it with my friend. I need to package it and send it to her.
+I found out how to package 
+
+https://www.electronjs.org/docs/tutorial/application-packaging
+https://github.com/electron/electron-packager
+https://github.com/electron/electron-packager/blob/master/usage.txt
+
+```
+$ yarn add -D electron-packager
+$ npx electron-packager -h
+$ npx electron-packager . remote-ui
+$ ls remote-ui-darwin-x64/remote-ui.app/
+```
+
+I was able to open the app and all. Now, the only thing remaining is - making
+the input for server url and port straight forward. I think I'll put a
+text box and connect button in the browser and get the input :)
 
