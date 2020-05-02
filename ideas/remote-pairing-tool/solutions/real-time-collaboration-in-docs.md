@@ -6,3 +6,7 @@ https://github.com/stas-sl/realtime-collaboration-resources
 https://upsilon.cc/~zack/research/publications/cscw-2018-rtce.pdf
 
 https://www.smartsheet.com/document-collaboration
+
+open source solutions:
+1.  https://etherpad.org/
+2. 
