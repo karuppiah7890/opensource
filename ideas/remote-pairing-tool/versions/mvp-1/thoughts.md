@@ -447,3 +447,69 @@ I was able to open the app and all. Now, the only thing remaining is - making
 the input for server url and port straight forward. I think I'll put a
 text box and connect button in the browser and get the input :)
 
+Okay, I was able to put a text box and get input and connect to the grpc
+server after the click of the "connect" button
+
+I then tested it with my friend. This is what I did for the setup
+
+1. Started the controller server (swift code. grpc server). The port was some
+random port
+2. Started ngrok
+```
+$ ngrok tcp <port>
+```
+3. Got the ngrok URL with port, and gave it to my friend
+4. I also gave the remote ui app (electron app) in a zip file to her, through
+my google drive
+5. She opened the app, allowed it in her security preferences and then allow
+my app
+6. She typed in the url and port in the input and connected and boom, she was
+able to control my mouse
+
+Since the app does not do screen sharing, I was showing her my screen through
+hangouts and she could see how the movement of the mouse was. This was the
+feedback that we came up with
+
+1. It was laggy. I mean, this was kinda obvious, because when I was trying it
+in my local, the connectivity is of course fast, later when I tried from my
+local to local server through ngrok just to check if ngrok connectivity works,
+I realized there was some lag, for even one mouse point move. Also, I think the
+fact that I do multiple method calls vs streaming input could also be a thing.
+And then, another thing is - Internet, along with ngrok being the middle thing,
+and she was seeing the mouse move through Hangouts meet, so, that's weird, I
+mean, Hangouts meet could be showing the screen a bit later, with some lag,
+so yeah, that could bring in some false sense of lag too. Anyways. So, that
+was that
+2. Not able to move much. So, this came from the fact that, currently the remote
+ui app just captures mouse movement when the mouse is within the app window,
+and the mouse control is based on relative positioning and moving. So, when my
+friend moved the mouse a lot, she could not as she moved out of the app window
+and lost control after that. Later this got me thinking. How do I make this
+better then? So, absolution might be crazy - because if the remote ui app
+window is small, a small movement there will be a big movement here. But it will
+make sure that there's freedom to move and all. But ideally, come to think of it,
+let's say I move my mouse to the end of the app window, to the corner and the
+app window is in full screen mode or just fitting the whole screen, and on the
+other side, based on relative positioning, the mouse moved, but is still somewhere
+in the middle of the screen, that's weird right? because of the problems
+relative position brings in. Instead, what if I never relied on mouse position?
+And instead just relied on the input from the trackpad? Not sure if it's possible,
+but that's what is the main source of input right? I move a bit in it, and the
+mouse moves, just that, in this case, the local mouse moves and based on that
+another remote mouse moves. Instead, why not move the remote mouse based on the
+trackpad and forget about the local mouse - it does not matter where the local
+mouse is - we can just hide it, and also allow movement outside the app window,
+but the mouse control happens only when app window is focused, so that you can
+get back your cursor in case you wanna do something else. I don't know. This
+could be a possible thing. This could bring possible problems for the user if they want
+to get back their control to the local mouse and also see the local mouse. There
+must be some way to lose control of the remote mouse. Gotta see what to do.
+Currently they can just do "Command + Tab" and they can switch apps and cursor
+will be visible, but later when keyboard control also comes into place, that's
+not a viable solution to bring back the cursor from it's hidden mode and also
+be able to control it. Hmm. 
+
+Gotta see if the above ideas make sense and then work on them after coming to
+a conclusion on what's the idea to control the mouse. That would be MVP 2 I
+think.
+
