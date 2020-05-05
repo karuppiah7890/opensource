@@ -63,3 +63,6 @@ https://github.com/Microsoft/vscode-extension-samples/tree/master/document-editi
 comment creation -
 https://github.com/Microsoft/vscode-extension-samples/tree/master/comment-sample
 
+Okay, so I have started to create a new extension, where I'll code more for
+the pairing tool.
+
