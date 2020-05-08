@@ -194,7 +194,7 @@ over usage by legitimate users.
 So, even in my case, I need to check the license usage - if it's a single
 user license, only single server can run with it, it's multi user, support that
 too. And if the number of users goes more than the limit, they should not be
-able to use it. 
+able to use it.
 
 ### Free Trial and Paid Users
 
@@ -202,9 +202,100 @@ This solution is kind of the one. Kind of inevitable. And most probably more
 solutions will be based on top of this is my guess. This is considering the
 fact that we need to solve the problems that were mentioned above.
 
+Some random thoughts:
+
+Heartbeat will be sent by servers (entities) to license server every t time.
+Heartbeat with information to identify the machine or server uniquely and also
+to identify the pricing plan given the license key and more details which
+I don't know now
+
+Concurrent connections or simultaneous connections - after every few minutes,
+check how many alive servers are there. If there's more than some. Kick the ones
+that came in later.
+
+How to identify each server separately? Use UUID? At start. Store it in file or
+something? Or have it in memory? Restarts will create new UUID
+
+Gracefully leaving of license by server during graceful shutdown?
+
+Crazy shutdown? It will be marked dead is it's heartbeat doesn't come
+
+Failing of license check by license server should not stop server. Atleast some
+fails can be forgiven, if it's license server side failure. Allow some 10
+failures from license server side. Or all server side errors can be forgiven?
+As it's our problem is license server is acting crazy.
+
+What about real license issues? Not renewed licenses, trials. Allow 10 failures.
+Let's give them a chance. Also, what if license server works but is misbehaving,
+may be due to storage etc issues, like license info gone, then also valid
+license issues will come as license server thinks all licenses are wrong.
+Gotta be careful. Need to build resilient systems, and with backup too, of course.
+
+And in my storage - I want to know everything that happened. Like when the
+license was extended. And how it's renewed etc. Every detail in history of
+licensing, subscription and payments
+
+
+License server to give the UUIDs to the clients. This way no one hacks and finds
+UUID and behaves as one. Actually. Whoever gives, imitation is still possible.
+How to avoid that?? How can one even change the UUID? Oh yeah. I was going to
+store the UUID. I think we can have it in memory itself. And consider it dead if
+it doesn't report or if gracefully leaves. Client can stop reporting because the
+network is down or the network is blocked. We need to tell users that the
+network should be up. Or else, after a few failures, the client will not work.
+And license will be considered invalid.
+
+Now what if customer wants the client to run in an air tight manner? And they
+still should be able to run during their license time. Hmm. I guess we can do
+something like license key, that itself has information regarding when is the
+expiry date and what not, but, it cannot be extended or flexible, as that would
+need network connection to get information. So. If the requirement is for air
+tight, they need go redeploy with new license key for updated expiry date. Or I
+need to think of some other way. Let's see research papers for this
+
+In the whole thing, we cannot allow anyone to know our license server's
+API - the request body, response body. Everything has to be secure. No man in
+the middle attacks. I think request URI is hard to hide. Hmm
+
+https://www.license4j.com/documents/floating-license-server/
+
+https://dzone.com/articles/opensource-license-manager
+
+https://cryptolens.io/open-source/
+
+https://github.com/furkansenharputlu/f-license
+
+https://github.com/open-license-manager/open-license-manager
+
+GitHub - license-management topic
+
+http://www.diva-portal.org/smash/get/diva2:696982/FULLTEXT01
+
+https://www.techsoup.org/support/articles-and-how-tos/introduction-to-microsoft-server-and-client-licensing
+
+https://www.wibu.com/magazine/keynote-articles/article/detail/license-server-in-high-availability-environments.html
+
+https://scholar.google.co.in/scholar?q=license+server+research+papers&hl=en&as_sdt=0&as_vis=1&oi=scholart
+
+https://patents.google.com/patent/US5023907A/en
+
+https://patents.google.com/patent/US6343280B2/en
+
+https://patents.google.com/patent/US5579222A/en
+
+https://patents.google.com/patent/US7996335B2/en
+
+https://patents.google.com/patent/US7885896B2/en
+
+https://patents.google.com/patent/US8732841B2/en
+
+https://patents.google.com/patent/US20020138442A1/en
+
+https://patents.google.com/patent/US20070011097A1/en
+
 ---
 
-I need to read research papers on license servers and licensing systems. 
+I need to read research papers on license servers and licensing systems.
 
 ---
 
