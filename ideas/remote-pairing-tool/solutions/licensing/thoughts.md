@@ -375,3 +375,16 @@ https://www.w3.org/TR/encrypted-media/#clear-key
 https://github.com/wyozi/cyan
 
 https://github.com/AuthorityFX/license-server
+
+https://en.wikipedia.org/wiki/Software_license_server
+
+https://en.wikipedia.org/wiki/Floating_licensing
+
+https://github.com/azaidi4/go-license-server
+
+https://github.com/zzsme/license-server
+
+https://github.com/aerth/aels
+
+https://github.com/vaefremov/pnglic
+
