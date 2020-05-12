@@ -366,3 +366,18 @@ very very serious about their privacy and security.
 Whatever I build, I need to consider security too in the architecture and
 also look for loop holes in all the places. Do security audits with some
 hackers ;)
+
+---
+
+Found anothre tool in market Code Together -
+https://marketplace.visualstudio.com/items?itemName=genuitecllc.codetogether
+https://github.com/Genuitec/CodeTogether - issues alone
+https://www.codetogether.com
+https://www.codetogether.com/download/
+https://www.codetogether.com/pricing/
+
+It has support for IntelliJ, VS Code and Eclipse. Nice
+
+They have a free plan!! :D 
+
+---
