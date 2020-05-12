@@ -39,3 +39,21 @@ user can help? Gotta see if central servers should help or not. Technically they
 can, but it's a question of privacy too. Hmm. Probably we can give an option for
 that and they can enabled or disable it may be? Hmm.
 
+---
+
+Some more databases and stuff I noticed when checking about CRDT and more
+
+
+Conflict-Free Replicated Data Types (CRDTs) - https://www.youtube.com/watch?v=ZLjl_55um4I
+
+https://www.youtube.com/channel/UC8LJKi0UlvZygUMC8wsKFEQ
+https://medium.com/offline-camp
+
+https://www.youtube.com/watch?v=B5NULPSiOGw
+
+https://couchdb.apache.org/
+https://blog.couchdb.org/
+https://docs.couchdb.org/en/stable/
+
+https://riak.com/
+

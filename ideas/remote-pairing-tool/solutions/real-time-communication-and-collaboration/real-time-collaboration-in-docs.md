@@ -162,3 +162,17 @@ VS Code collaborative editing
 
 https://marketplace.visualstudio.com/items?itemName=lyuboraykov.share
 https://github.com/lyuboraykov/vscode-share
+
+---
+
+Holy god! Atom text editor has an open source way to collaborate!!! :D
+Damn! That's it. I'll go contribute, and also try to port it to VS Code
+may be? And Sublime and what not? :P Let's see :)
+
+https://teletype.atom.io/
+https://github.com/atom/teletype
+
+Thanks to Martin Klepmann for mentioning about this feature in his talk
+here https://www.youtube.com/watch?v=B5NULPSiOGw
+
+---
