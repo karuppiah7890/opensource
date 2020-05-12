@@ -5,6 +5,8 @@ Peer to Peer (P2P) vs Central servers?
 Tech? WebRTC, IPFS (orbitdb etc), GunDB?
 Bit torrent? Raft? Dat project?
 
+Paid - Firebase
+
 Environments to run in? Constraints? Requirements?
 
 Some thoughts on Requirements:

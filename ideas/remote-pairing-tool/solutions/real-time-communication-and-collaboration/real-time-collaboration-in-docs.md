@@ -73,3 +73,92 @@ https://github.com/azat-co/editor
 https://github.com/chaoscollective/Space_Editor
 https://github.com/fiduswriter/fiduswriter
 https://github.com/eberlitz/eb-editor
+
+---
+
+Found more VS Code extensions -
+
+https://github.com/sockscode/sockscode-vscode
+https://github.com/sockscode/sockscode-server
+https://marketplace.visualstudio.com/items?itemName=shyykoserhiy.sockscode-vscode
+
+https://marketplace.visualstudio.com/items?itemName=the-wire.rt-code-collab
+https://github.com/THE-WIRE/RT-Code-Collab
+https://github.com/THE-WIRE/web-rt
+
+---
+
+Thoughts on editing:
+Only one or a few users can edit? Not all users. Hmm. Viewers/Editors concept.
+Viewers can only view.
+
+---
+
+Looks like VS Code Live Share allows others to build on top of it? Check it
+out!
+
+https://marketplace.visualstudio.com/items?itemName=lostintangent.vsls-whiteboard
+https://github.com/vsls-contrib/whiteboard
+
+https://marketplace.visualstudio.com/items?itemName=lostintangent.vsls-pomodoro
+https://github.com/vsls-contrib/pomodoro
+
+---
+
+More VS Code Live Share stuff! 
+
+https://github.com/vsls-contrib
+https://github.com/vsls-contrib/awesome-liveshare
+
+---
+
+Comments on Code and Code Review - 
+
+https://marketplace.visualstudio.com/items?itemName=CodeStream.codestream
+https://www.codestream.com/
+
+---
+
+Noticed something cool - recording and playing the process of programming
+
+https://marketplace.visualstudio.com/items?itemName=wix.codio
+
+Just something to check in case we are looking at tests or tutorials and
+stuff. Collabortive tools are key for teachers and it can be interesting to
+see how things came up to be. git can also help, but it can only jump from
+one commit to another commit, not see at a more micro level ;)
+
+---
+
+Share project or file from VS Code with the world
+
+https://marketplace.visualstudio.com/items?itemName=code-share.code-share
+
+[Codesandbox](https://codesandbox.io) is used to share the code I think
+
+---
+
+Collaborate in VS Code with AWS Cloud9 service
+
+https://marketplace.visualstudio.com/items?itemName=iann0036.live-share-for-aws-cloud9
+https://github.com/iann0036/cloud9-sync
+
+---
+
+Another live share thing for VS Code
+
+https://marketplace.visualstudio.com/items?itemName=DimaCrafter.vs-collab
+
+---
+
+unity collaborate UI? gotta check
+
+https://marketplace.visualstudio.com/items?itemName=thainayu.vscodeunitycollab
+https://github.com/Thaina/vscodeunitycollab
+
+---
+
+VS Code collaborative editing
+
+https://marketplace.visualstudio.com/items?itemName=lyuboraykov.share
+https://github.com/lyuboraykov/vscode-share
