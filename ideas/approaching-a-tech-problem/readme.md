@@ -20,3 +20,5 @@ itself. So yeah, it's not always about the destination - it's about the
 journey! 
 8. Make sure you don't make your life harder and instead make it easier
 while writing code! :)
+9. Look for blog articles
+10. Look for YouTube and other site videos (individual, channels, playlists) of tutorials, meetups, conferences, bootcamps etc
