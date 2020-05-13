@@ -175,4 +175,11 @@ https://github.com/atom/teletype
 Thanks to Martin Klepmann for mentioning about this feature in his talk
 here https://www.youtube.com/watch?v=B5NULPSiOGw
 
+https://github.com/atom/teletype-crdt
+https://github.com/atom/teletype-server
+https://github.com/atom/teletype-client
+
 ---
+
+High Responsiveness for Group Editing CRDTs
+https://pages.lip6.fr/Marc.Shapiro/papers/rgasplit-group2016-11.pdf

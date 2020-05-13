@@ -4,6 +4,7 @@ Peer to Peer (P2P) vs Central servers?
 
 Tech? WebRTC, IPFS (orbitdb etc), GunDB?
 Bit torrent? Raft? Dat project?
+Websockets?
 
 Paid - Firebase
 
@@ -57,3 +58,39 @@ https://docs.couchdb.org/en/stable/
 
 https://riak.com/
 
+---
+
+RGA ? What's that? Find out? Something related to text editing
+https://duckduckgo.com/?q=RGA+CRDT+algorithm&t=ffab&ia=web
+
+Verifying strong eventual consistency in distributed systems
+https://dl.acm.org/doi/10.1145/3133933
+https://dl.acm.org/doi/pdf/10.1145/3133933
+
+---
+
+Full Ecosystem:
+https://github.com/automerge
+
+Data layer based on CRDT concepts:
+https://github.com/automerge/automerge
+https://github.com/automerge/automerge-rs
+
+Network layer:
+https://github.com/automerge/hypermerge (Based on hypercore/Dat)
+https://github.com/automerge/mpl (Based on webrtc)
+Other possible network layers: Websockets
+
+Apps:
+https://github.com/automerge/pixelpusher
+https://github.com/automerge/trellis
+
+Slack: https://automerge.slack.com
+
+---
+
+Real time collaboration for jupyter
+
+https://github.com/jupyterlab/rtc
+
+---
