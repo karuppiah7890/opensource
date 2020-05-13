@@ -99,3 +99,8 @@ Real time collaboration for jupyter
 https://github.com/jupyterlab/rtc
 
 ---
+
+Conflict-Free Replicated Data Types (CRDT) for Distributed JavaScript Apps.
+https://www.youtube.com/watch?v=M8-WFTjZoA0
+
+---
