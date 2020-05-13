@@ -67,6 +67,11 @@ Verifying strong eventual consistency in distributed systems
 https://dl.acm.org/doi/10.1145/3133933
 https://dl.acm.org/doi/pdf/10.1145/3133933
 
+A Conflict-Free Replicated JSON Datatype research paper
+https://arxiv.org/abs/1608.03960
+https://arxiv.org/pdf/1608.03960
+
+
 ---
 
 Full Ecosystem:
