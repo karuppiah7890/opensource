@@ -207,4 +207,42 @@ docs automerge library may not help as automerge uses RGA Split algorithm -
 need to check this and the speaker asks us to use something more efficient
 and better, like Dotted LogootSplitAVL. 
 
+---
 
+Some research papers that are mentioned in [teletype-crdt](https://github.com/atom/teletype-crdt)
+are 
+
+Data consistency for P2P collaborative editing
+https://dl.acm.org/doi/10.1145/1180875.1180916
+
+Supporting String-Wise Operations and Selective Undo for Peer-to-Peer Group Editing
+https://dl.acm.org/doi/10.1145/2660398.2660401
+
+High Responsiveness for Group Editing CRDTs - I had mentioned it before too.
+https://dl.acm.org/doi/10.1145/2957276.2957300
+
+Looks like I got tons of research papers to checkout!
+
+I need to understand the algorithm that [teletype-crdt](https://github.com/atom/teletype-crdt)
+uses.
+
+---
+
+Tasks:
+1. Read the papers
+
+Data consistency for P2P collaborative editing
+https://dl.acm.org/doi/10.1145/1180875.1180916
+
+Supporting String-Wise Operations and Selective Undo for Peer-to-Peer Group Editing
+https://dl.acm.org/doi/10.1145/2660398.2660401
+
+High Responsiveness for Group Editing CRDTs - I had mentioned it before too.
+https://dl.acm.org/doi/10.1145/2957276.2957300
+
+While reading, make notes of everything you learn. Use
+diagrams, etc. This will be useful to read again and also
+to present it to the papers we love community! :)
+
+2. Find out the algorithm used by automerge
+3. Find out the algorithm used by teletype-crdt
