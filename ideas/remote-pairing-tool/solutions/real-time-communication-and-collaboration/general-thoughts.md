@@ -146,5 +146,6 @@ agree upon the same set of old data, that they want to get rid of, and then
 get rid of it at once? That seems like a very basic idea. I might look it up
 later after understanding more about the premise, because I didn't hear about
 the word "tombstone" in CRDT premises/context. Anyways, I still want to get
-rid of very very old changes somehow, as mentioned above
+rid of very very old changes somehow, as mentioned above. 
 
+Okay, looks like "tombstones" concept is part of Operational Transformations (OTs).

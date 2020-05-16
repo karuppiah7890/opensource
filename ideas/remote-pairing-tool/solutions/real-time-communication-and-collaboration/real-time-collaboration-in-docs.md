@@ -186,6 +186,8 @@ https://pages.lip6.fr/Marc.Shapiro/papers/rgasplit-group2016-11.pdf
 
 ---
 
+Different Sequence CRDTs
+
 WOOT
 Treedoc
 RGA
@@ -196,6 +198,13 @@ LSEQ
 Astrong
 LSEQSplit
 LogootSplitAVL
+Dotted LogootSplitAVL?
 
 ---
+
+https://www.youtube.com/watch?v=M8-WFTjZoA0 so this talk tells how for text
+docs automerge library may not help as automerge uses RGA Split algorithm -
+need to check this and the speaker asks us to use something more efficient
+and better, like Dotted LogootSplitAVL. 
+
 
