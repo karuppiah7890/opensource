@@ -104,3 +104,47 @@ Conflict-Free Replicated Data Types (CRDT) for Distributed JavaScript Apps.
 https://www.youtube.com/watch?v=M8-WFTjZoA0
 
 ---
+
+https://pouchdb.com/
+
+---
+
+So, I'm thinking of creating a basic to do app may be? To start with?
+To play with different solutions. But yeah, it won't be close to what I need
+to do for text collaboration. I think I need to work on that too. Yeah.
+Hmm. A peer to peer, to do app sounds fun, yes. Especially with offline support!
+:) Anyways, I think I'll try the text collaboration thing first I think :)
+May be show a list of versions and all for every change and stuff.
+Use different kinds of networks like - dat, ipfs, webrtc, websockets, to see
+how it all goes? To start with, may be dat and webrtc I guess. Let's see.
+
+One thing to note is - I don't know if I need all the changes of the document -
+if all the peers have the same document at some point? But, well, that's not
+for sure. People could keep changing the document. So, I guess we just have to
+keep it up. But, what if we can compress the very very old changes? That both
+the peers have? That way, we have lesser stuff in the history - history size
+is less - actually, more like, aggregate all the changes of the past, and make
+it as one change - I don't know. It sounds good, but idk how it would be done.
+I just gotta see what downsides the history will have - because there's a lot
+of history for the changes, so yeah. Especially for text, it looks like the
+changes are at character level - more like a character that you can see. Hmm.
+Anyways, I'm sure I'm going to figure it out! :) 
+
+In this video - https://www.youtube.com/watch?v=M8-WFTjZoA0 , they talk about
+how some old data (tombstones) take up a lot of memory, and how we can get rid
+of it - but that's possible only if all the peers are online and the process
+has to happen at the same time - since we are getting rid of it, as we don't
+need it - it's like garbage, so, he calls it garbage collection, the usual
+programming term. So, some garbage collection protocol, and if all peers are
+online, which is not easy to ensure if you don't know who are the peers and what
+is the total number of peers or if there is even any concept of total peers,
+especially in a completely peer to peer system. Anyways, even if we can say
+that all necessary peers are online, to perform garbage collection, while the
+peers are editing too - as you cannot stop the peer and say program wants to
+do some clean up - so while they are still editing, I "guess" all peers could
+agree upon the same set of old data, that they want to get rid of, and then
+get rid of it at once? That seems like a very basic idea. I might look it up
+later after understanding more about the premise, because I didn't hear about
+the word "tombstone" in CRDT premises/context. Anyways, I still want to get
+rid of very very old changes somehow, as mentioned above
+

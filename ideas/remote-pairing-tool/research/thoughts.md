@@ -368,3 +368,15 @@ also look for loop holes in all the places. Do security audits with some
 hackers ;)
 
 ---
+
+p2p video conferencing powered by WebRTC.
+https://p2p.chat
+https://github.com/tom-james-watson/p2p.chat
+
+https://cabal.chat/
+cabal is an experimental p2p community
+chat platform
+
+https://github.com/feross/simple-peer
+
+---

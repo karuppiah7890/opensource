@@ -183,3 +183,19 @@ https://github.com/atom/teletype-client
 
 High Responsiveness for Group Editing CRDTs
 https://pages.lip6.fr/Marc.Shapiro/papers/rgasplit-group2016-11.pdf
+
+---
+
+WOOT
+Treedoc
+RGA
+RGASplit
+RGA with Interleaving
+Logoot
+LSEQ
+Astrong
+LSEQSplit
+LogootSplitAVL
+
+---
+
