@@ -149,3 +149,28 @@ the word "tombstone" in CRDT premises/context. Anyways, I still want to get
 rid of very very old changes somehow, as mentioned above. 
 
 Okay, looks like "tombstones" concept is part of Operational Transformations (OTs).
+
+---
+
+https://libp2p.io/
+https://github.com/libp2p/libp2p
+
+---
+
+https://github.com/search?utf8=%E2%9C%93&q=hypercore
+https://github.com/hyperswarm
+https://github.com/datrs
+https://github.com/mafintosh/hypercore
+https://dat.foundation/explore/projects/
+https://github.com/datproject/dat
+
+https://github.com/cabal-club
+
+---
+https://ace.c9.io/
+https://codemirror.net/
+
+---
+
+https://arxiv.org/search/?query=crdt&searchtype=all&source=header
+https://arxiv.org/search/?searchtype=author&query=Kleppmann%2C+M

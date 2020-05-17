@@ -214,6 +214,7 @@ are
 
 Data consistency for P2P collaborative editing
 https://dl.acm.org/doi/10.1145/1180875.1180916
+https://dl.acm.org/doi/pdf/10.1145/1180875.1180916
 
 Supporting String-Wise Operations and Selective Undo for Peer-to-Peer Group Editing
 https://dl.acm.org/doi/10.1145/2660398.2660401
@@ -233,6 +234,7 @@ Tasks:
 
 Data consistency for P2P collaborative editing
 https://dl.acm.org/doi/10.1145/1180875.1180916
+https://dl.acm.org/doi/pdf/10.1145/1180875.1180916
 
 Supporting String-Wise Operations and Selective Undo for Peer-to-Peer Group Editing
 https://dl.acm.org/doi/10.1145/2660398.2660401
@@ -246,3 +248,48 @@ to present it to the papers we love community! :)
 
 2. Find out the algorithm used by automerge
 3. Find out the algorithm used by teletype-crdt
+
+---
+
+WOOT
+https://github.com/siuying/woot-doc
+https://github.com/t-mullen/woot-crdt
+https://github.com/t-mullen/logoot-crdt
+https://github.com/d6y/wootjs
+https://github.com/alexandrepiveteau/distributed-kotlin
+https://github.com/ansonl/objc-woot
+https://github.com/kana-sama/edita
+https://github.com/disordinary/ed
+
+---
+
+https://github.com/alexandrepiveteau/elm-ordt
+
+https://github.com/search?q=crdt
+
+https://github.com/ipfs/notes
+https://github.com/ipfs/notes/tree/master/CRDT
+
+https://github.com/neurodrone/crdt
+
+https://github.com/asonge/loom
+
+---
+
+https://github.com/coast-team/dotted-logootsplit
+
+https://github.com/automerge/automerge/blob/master/INTERNALS.md
+
+https://sci-hub.tw/
+
+---
+
+https://duckduckgo.com/?t=ffab&q=atom+editor+collaboration&ia=web
+
+---
+
+https://dl.acm.org/doi/10.1145/1180875.1180916
+https://dl.acm.org/doi/10.1145/3133933
+https://dl.acm.org/doi/10.1109/3PGCIC.2012.26
+
+https://dl.acm.org/action/doSearch?AllField=crdt
