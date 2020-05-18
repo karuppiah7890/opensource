@@ -293,3 +293,68 @@ https://dl.acm.org/doi/10.1145/3133933
 https://dl.acm.org/doi/10.1109/3PGCIC.2012.26
 
 https://dl.acm.org/action/doSearch?AllField=crdt
+
+---
+
+Okay, I'm done reading the implementation of
+
+Data consistency for P2P collaborative editing
+https://dl.acm.org/doi/10.1145/1180875.1180916
+
+I didn't read the proof part of it though. Might have to glance through that
+once. I was planning to implement WOOT and understand it better and even use
+it build a real world app like a collaborative editor. 
+
+I was checking the Ace editor. It was good to check some of it's features.
+It gave features to listen to events which gave a delta - insert/remove.
+I think I'll get back to that.
+
+I also though about how to propagate the operations among all the peers.
+Since it's a broadcast, I thought it might be too much for one peer to
+send all it's operations to all the other peers. If it's a P2P network,
+why can't it just send to some of them and then that can be propagated
+to the other peers. 
+
+I was thinking about checking out some protocol like serf - and probably
+implement it in js or something to use for web apps. But that's too much.
+Also, there might be existing solutions - for example https://libp2p.io .
+Also, there are other broadcast mechanisms and implementations out there,
+and not just these. Anyways, I'm planning to read the next paper now. Which is
+
+Supporting String-Wise Operations and Selective Undo for Peer-to-Peer Group Editing
+https://dl.acm.org/doi/10.1145/2660398.2660401
+
+---
+
+RGAs - Replicated abstract data types: Building blocks for collaborative applications
+RGAs-replicated-abstract-data-types-building-blocks-for-collaborative-applications
+http://csl.skku.edu/papers/jpdc11.pdf
+
+Optimistic Operations for Replicated Abstract Data Types
+optimistic-operations-for-replicated-abstract-data-types.pdf
+https://cs.kaist.ac.kr/upload_files/report/1254967150.pdf
+
+Convergent and Commutative Replicated Data Types
+convergent-and-commutative-replicated-data-types.pdf
+https://core.ac.uk/download/pdf/55634119.pdf
+
+Replicated Data Types
+replicated-data-types.pdf
+https://hal.archives-ouvertes.fr/hal-01578910/file/replicated-data-types-Encyclopedia-DB-systems-2016-authorversion.pdf
+
+
+LogootSplit Sequence CRDT
+Supporting Adaptable Granularity of Changes for Massive-scale Collaborative Editing
+supporting-adaptable-granularity-of-changes-for-massive-scale-collaborative-editing.pdf
+https://doi.org/10.4108/icst.collaboratecom.2013.254123
+https://eudl.eu/doi/10.4108/icst.collaboratecom.2013.254123
+https://www.researchgate.net/publication/269071934_Supporting_Adaptable_Granularity_of_Changes_for_Massive-scale_Collaborative_Editing
+
+Delta State Replicated Data Types
+delta-state-replicated-data-types.pdf
+https://arxiv.org/pdf/1603.01529.pdf
+
+A comprehensive study of Convergent and Commutative Replicated Data Types
+a-comprehensive-study-of-convergent-and-commutative-replicated-data-types.pdf
+https://www.researchgate.net/publication/50949847_A_comprehensive_study_of_Convergent_and_Commutative_Replicated_Data_Types
+
