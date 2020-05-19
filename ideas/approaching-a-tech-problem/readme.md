@@ -22,3 +22,7 @@ journey!
 while writing code! :)
 9. Look for blog articles
 10. Look for YouTube and other site videos (individual, channels, playlists) of tutorials, meetups, conferences, bootcamps etc
+
+---
+
+This should ideally become a blog post or something :P

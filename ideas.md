@@ -15,17 +15,17 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 
 5. [view-counter](https://github.com/karuppiah7890/view-counter)
 
-6. [invite-buddy](https://github.com/karuppiah7890/invitebuddy)
+6. [invite-buddy](ideas/invite-buddy/readme.md)
 
-7. [rabbit-email](https://github.com/karuppiah7890/rabbit-email)
+7. [rabbit-email](ideas/rabbit-email/readme.md)
 
-8. Flip It
+8. [Flip It](ideas/flip-it/readme.md)
 
-9. GoCD Google Chat notifier plugin
+9. [GoCD Google Chat notifier plugin](ideas/gocd-google-chat-notifier-plugin/readme.md)
 
-10. pika
+10. [pika](ideas/pika/readme.md)
 
-11. Play music in sync in multiple devices! Sound Seeker clone!
+11. [Sound Seeker clone!](ideas/sound-seeker-clone/readme.md)
 
 12. [GetStream clone](ideas/getstream-clone/readme.md)
 
@@ -34,3 +34,12 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 14. [custom-edit-text-with-tagging-in-android](ideas/custom-edit-text-with-tagging-in-android/readme.md)
 
 15. [approaching-a-problem](ideas/approaching-a-tech-problem/readme.md)
+
+16. [Yet Another URL Shortener](ideas/yet-another-url-shortener/readme.md)
+
+17. [Open Source Version of onlinevideoconverter.com](https://github.com/open-source-ideas/open-source-ideas/issues/37)
+
+18. [Open Source vesion of SoundWire Android App](https://github.com/open-source-ideas/open-source-ideas/issues/27)
+
+19. [Android File Sharing Library](https://github.com/open-source-ideas/open-source-ideas/issues/25)
+

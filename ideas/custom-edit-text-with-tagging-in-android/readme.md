@@ -60,4 +60,12 @@ box is at the bottom of the screen,
 the suggestions still show up above
 the box! :)
 
+---
 
+I created a repo based on this - 
+https://github.com/karuppiah7890/custom-edit-text
+
+Still got lots of work to do. The code looks a bit complex. I want to make it
+more clean and straight forward, for which I think I need to make the design
+more simple, that is, the algorithm, the methods. And there are still multiple
+features left out in it.
