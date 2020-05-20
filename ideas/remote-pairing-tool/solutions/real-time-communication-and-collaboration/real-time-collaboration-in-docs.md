@@ -358,3 +358,122 @@ A comprehensive study of Convergent and Commutative Replicated Data Types
 a-comprehensive-study-of-convergent-and-commutative-replicated-data-types.pdf
 https://www.researchgate.net/publication/50949847_A_comprehensive_study_of_Convergent_and_Commutative_Replicated_Data_Types
 
+---
+
+Tutorial: How to build an Collaborative Editing Application with IPFS using CRDT
+https://www.youtube.com/watch?v=-kdx8rJd8rQ
+
+How to make a real-time collaborative text  editor in 5 easy steps! // Rudi Chen
+https://www.youtube.com/watch?v=jIR0Ngov7vo
+
+My own playlist: Real Time Collaborative editing
+https://www.youtube.com/playlist?list=PL6xKBQ9SsrsafblRImhUwe7hydsqMzI3y
+
+---
+
+I found this thing called Yjs, and a research paper for "YATA" and that Yjs is
+an implementation of YATA. Details below -
+
+YATA
+
+https://www.researchgate.net/publication/310212186_Near_Real-Time_Peer-to-Peer_Shared_Editing_on_Extensible_Data_Types
+
+https://github.com/yjs/yjs
+
+http://y-js.org/
+
+https://yjs.dev/
+
+https://discuss.yjs.dev/
+
+https://gitter.im/Yjs/community
+
+https://github.com/yjs/yjs-demos
+
+https://github.com/yjs/y-webrtc
+
+https://yjs.dev/#features
+
+The demo was done using these editors -
+ProseMirror - rich text editor
+Quill - rich text editor
+Drawing (there was some collaborative drawing thing)
+
+https://github.com/yjs/yjs/blob/master/README.md
+
+https://yjs.dev/#community
+
+https://github.com/dmonad/crdt-benchmarks
+
+https://www.tag1consulting.com/blog/deep-dive-real-time-collaborative-editing-solutions-tagteamtalk-001-0
+
+https://publishpress.com/blog/yjs/
+
+https://www.tag1consulting.com/blog/yjs-webrtc-part-1
+
+http://results.learning-layers.eu/infrastructure/client-frameworks/yjs/
+
+---
+
+About gossip protocols for networking - 
+
+https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf
+
+https://www.serf.io/docs/internals/gossip.html
+
+
+---
+
+“Collaborative text editing with Logoot” by Ravern Koh https://link.medium.com/fi0wHOuax6
+
+Logoot CRDT: interleaving of data on concurrent edits to the same spot?
+https://stackoverflow.com/q/45722742/4772008
+
+
+Logoot: A Scalable Optimistic Replication Algorithm for
+Collaborative Editing on P2P Networks
+https://hal.inria.fr/inria-00432368/document
+
+Logoot-Undo: Distributed Collaborative Editing System on P2P Networks
+https://www.researchgate.net/publication/47441669_Logoot-Undo_Distributed_Collaborative_Editing_System_on_P2P_Networks
+
+"There are several CRDT algorithms (LSEQ, Logoot, WOOT, Treedoc)..."
+https://news.ycombinator.com/item?id=12304305
+
+
+Collaborative text editor using Logoot CRDT algorithm 
+https://github.com/mkdynamic/logoot
+
+
+LSEQ: an Adaptive Structure for Sequences in
+Distributed Collaborative Editing
+https://hal.archives-ouvertes.fr/hal-00921633/document
+
+Logoot: a P2P collaborative editing system
+https://hal.inria.fr/inria-00336191v3/document
+
+Supporting Adaptable Granularity of Changes for
+Massive-scale Collaborative Editing
+https://hal.inria.fr/hal-00903813/document
+
+
+A String-Wise CRDT for Group Editing
+https://dl.acm.org/doi/10.1145/2389176.2389198
+https://dl.acm.org/doi/pdf/10.1145/2389176.2389198
+
+Evaluating CRDTs for Real-time Document Editing
+https://hal.inria.fr/inria-00629503/document
+
+A Comprehensive study of Convergent and Commutative Replicated Data Types
+https://blog.acolyer.org/2015/03/18/a-comprehensive-study-of-convergent-and-commutative-replicated-data-types/
+
+Xiao Lv
+https://dblp.org/pers/l/Lv:Xiao.html
+
+https://www.quora.com/How-do-I-download-IEEE-papers-for-free?top_ans=161094348
+
+https://sci-hub.tw/
+
+---
+
+
