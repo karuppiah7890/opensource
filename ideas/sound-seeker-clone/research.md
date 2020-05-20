@@ -36,4 +36,5 @@ http://www.tdcommons.org/cgi/viewcontent.cgi?article=1153&context=dpubs_series
 
 ---
 
+AmpMe - Speaker Booster app - it can play music in sync!
 https://play.google.com/store/apps/details?id=com.amp.android
