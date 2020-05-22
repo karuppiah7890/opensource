@@ -43,3 +43,8 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 
 19. [Android File Sharing Library](https://github.com/open-source-ideas/open-source-ideas/issues/25)
 
+20. Build an AR App - any
+
+21. [Build an AR filter for Instagram, Facebook](ideas/build-an-ar-filter-for-instagram-facebook/readme.md)
+
+22. 
