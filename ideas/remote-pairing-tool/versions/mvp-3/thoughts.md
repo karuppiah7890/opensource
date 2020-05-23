@@ -267,4 +267,14 @@ For UI, Live Share uses the bottom status bar, to show the identity of the
 user and uses the notifications to show non-finite progress - it just keeps
 moving around to show that something's going on.
 
+It also uses an extra view on the explorer to show some things regarding the
+Live Share. And there's a separate section for it on the left which also has
+almost the same details and it's called Session details. And there's some extra
+stuff here - Recent Contacts, Suggested Contacts, Reporting bugs, Configuring
+Settings, Giving Feedback. 
 
+Configuring Settings - I can see quite some settings! For example - showing
+Live Share status in the status bar - always, never or only while collaborating.
+And some more stuff
+
+I gotta see what I wanna do now. Hmm. 
