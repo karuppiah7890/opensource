@@ -209,4 +209,29 @@ tools and note down their UX, behavior and all and learn from them and note
 down everything! :) Hmm. I did understand some stuff in each tool, but I think
 these tools have a looot in them! :)
 
+Okay, back to how the authentication happens - I found it out. So, of course
+things don't happen the way I imagined, because for that token would be needed,
+and no place token was set in the code I walked through except one place, but
+I had no idea who was passing in the token. Later I realized in terms of the UI,
+it was me who was giving the token as input, so I used the UI placeholder and
+other text to find the UI component and found out that it calls the signin
+method in the authentication provider using the token, and the signin method
+does stuff like signing in with the token and then setting the credentials cache
+to store the token.
+
+I guess the first thing to do over here is, create a UI for the same in VS
+Code. Hmm. Also, may be check how VS Code Live Share has it's UI and user
+experience. May be we can keep it simpler? Idk.
+
+VS Code Live Share does not ask it's users to do a copy paste of the token,
+but there's a facility to do so, if the automatic thing doesn't work. I need
+to see how to detect the code automatically. Hmm.
+
+Also, in VS Code, once the tokens are used, they become invalid - expired.
+Unlike in Atom, where I was able to use the token again and again. Hmm.
+Not so good actually 😅Like, just in case someone sees my token. Hmm.
+And I was recording a video to see the experience. So, I had to actually remove
+the OAuth app - that is, revoke access and then allow access again, and then
+only the old tokens became invalid and only the new tokens worked :)
+
 
