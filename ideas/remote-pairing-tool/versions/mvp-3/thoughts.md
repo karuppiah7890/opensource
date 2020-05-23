@@ -172,4 +172,41 @@ now I'm not gonna dig into it I guess.
 I'll just keep it in mind that we are going to use the OS keychain to store the
 oauth token of GitHub and that's it :)
 
+Actually, the name of the secret is being called `oauth-token`. Hmm. My bad, I
+guess it's different from a personal access token. Weirdly I don't see the
+GitHub App in my GitHub Apps list. Let me go check that first
+
+Oh. I was looking at the wrong place. Of course I didn't have just one
+authorized app in my list which I was seeing. Found it here
+
+https://github.com/settings/applications
+
+It was called Teletype for Atom. Yup. It was through OAuth and not a personal
+access token.
+
+Okay, I'll check how the authentication is happening now. And how those cute
+avatars come ;)
+
+Btw, with respect to `keytar`, I don't find `keytar` in the `package.json`. I
+think Atom has it built in, in it's source code, in it's `package.json`? Yeah,
+I see it `https://github.com/atom/atom` codebase in the `package-lock.json`
+under `github` package which is actually this package over here -
+https://github.com/atom/github . It's the Git and GitHub integration package
+for Atom.
+
+Looks like the `teletype-client` is used for the signin process, by giving
+in the `token`. 
+
+Okay, just now I tried out the login mechanism in Atom, by revoking OAuth
+access for `Teletype for Atom` application. It asked me to login this time,
+at `teletype.atom.io/login` and the usual OAuth mechanism happened. I got
+redirected to the github oauth page, where it got read access to my data to
+identify me. And then it showed me a token, which it asked me to copy and
+paste in Atom. And I did it and it worked.
+
+I can't remember how I did it in VS Code. I guess I need to start analysing the
+tools and note down their UX, behavior and all and learn from them and note
+down everything! :) Hmm. I did understand some stuff in each tool, but I think
+these tools have a looot in them! :)
+
 
