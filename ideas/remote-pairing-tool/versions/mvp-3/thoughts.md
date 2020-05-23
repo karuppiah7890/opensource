@@ -234,4 +234,37 @@ And I was recording a video to see the experience. So, I had to actually remove
 the OAuth app - that is, revoke access and then allow access again, and then
 only the old tokens became invalid and only the new tokens worked :)
 
+Okay, so I tried the VS Code Live Share extension some more now. I noticed that
+when the extension is enabled in one session and you go and invite another
+person - if their extension is not enabled, nothing shows up. You can just see
+an exclamation sign near the root directory name / project name, I don't know
+how that alone got leaked, not sure, but other than that, I could not see files,
+directories, or things like Live Chat and all. Later, I enabled it and then saw
+it all reload and come up at once.
+
+It had features like kicking out participants, or things like participants
+leaving the collaboration session. And anyone can focus everyone on a single
+file using `Focus Participants` feature. It was actually pretty cool. And for
+multi cursor, only when you get into a new file tab, it would show the cursor
+and the name of the other person, and the cursor will be colored. And after that
+I tried hard to hover over the cursor and see names, but couldn't. It actually
+showed initially, but never later. It showed later only when the tab was closed
+and opened, and it was shown the first time alone.
+
+Apparently VS Code also has some cap on the number of people who can collaborate.
+It's a big number only though - 30. Pretty useful for pair programming, but
+if you have some coding class or tutorial class and have too many read-only
+sessions, you might need more than 30. Not sure though. Hmm. CodePen has this
+pro feature for collab mode, which is short for collaboration mode.
+
+One weird thing I noticed is, in the VS Code Live Share Chat, I was able to
+see different avatar in one workspace and totally different one in another.
+I think one of them is based on my microsoft account and the other is based on
+my GitHub. Just a guess, as I can't remember which account I initially linked
+it with.
+
+For UI, Live Share uses the bottom status bar, to show the identity of the
+user and uses the notifications to show non-finite progress - it just keeps
+moving around to show that something's going on.
+
 
