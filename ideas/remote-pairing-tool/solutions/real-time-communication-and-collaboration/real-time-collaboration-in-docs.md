@@ -485,3 +485,24 @@ IntelliJ provides, that is separate editors for separate languages - pyCharm,
 RubyMine etc. Hmm.
 
 ---
+
+VS Code Extension for paired programming 
+https://github.com/Deepali-Gupta/code-pair
+
+https://github.com/r-a303931/vs-code-collaborator
+
+https://github.com/jgpasch/vscode-pair-p
+---
+
+Sharing code screenshot
+
+https://github.com/screenify/screenify-vscode
+
+---
+
+https://github.com/VSShare
+
+https://github.com/VSShare/Extension-Code
+
+---
+

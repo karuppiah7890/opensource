@@ -278,3 +278,32 @@ Live Share status in the status bar - always, never or only while collaborating.
 And some more stuff
 
 I gotta see what I wanna do now. Hmm. 
+
+I think I'll read some more code to see how the authentication happens and
+what happens next - like sharing code / workspace, joining portal. And may be
+start thinking of a minimalistic UI for a start for those things, including
+login!
+
+Phew! Lots of code. Overwhelms me. One thing is for sure - I have to understand
+and write lots of code for even the view part and stuff and integrate it with
+`teletype-client`, at least that's the current idea. I'm still trying to
+understand their terminologies and working. I also gotta see if I can implement
+the same in VS Code. Hmm. Let's see. 
+
+By the way, for the avatar, that is, my DP - display picture, I just need to
+use this URL - `https://avatars.githubusercontent.com/${login}` and that's it!
+
+For example - https://avatars.githubusercontent.com/karuppiah7890 is my avatar
+for my `karuppiah7890` github account. This is nice! :) Hmm. And anyone can see
+it I guess, like, request for it, given login username. Anyways, I don't think
+I'm going to show avatar anywhere, or any fancy UI. Most probably it's all going
+to be very very basic UI to start with. And fancy stuff, I'll check later! :)
+
+I think I need to understand the features that `teletype-client` is providing
+and then yeah, of course come back and see how `teletype` uses this and I
+gotta understand how `teletype-server` and `teletype-crdt` play a role in this
+whole thing. In short, I want to understand how the whole stack works, to be
+able to understand the architecture and working and may be replicate it, or
+else, write some stuff of my own if nothign suits me. But I think I should start
+with this code, no matter what, and write as little code as possible! :)
+
