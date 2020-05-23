@@ -476,4 +476,12 @@ https://sci-hub.tw/
 
 ---
 
+I was just now seeing multiple services for helping with code collaboration
+and support for native text editors. I noticed support for editors like
+Neovim, Emacs. I mean. That's Cool! I don't know how many people out there
+support these command line based text editors. Hmm. Also, I think if one
+supports IntelliJ IDEA - the support extends to the whole set of editors that
+IntelliJ provides, that is separate editors for separate languages - pyCharm,
+RubyMine etc. Hmm.
 
+---

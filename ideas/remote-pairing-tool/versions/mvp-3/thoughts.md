@@ -52,4 +52,124 @@ The RFCs are really really good. I had some thoughts on some overview of these.
 I can see some elaborate thoughs and features that have been implemented. It's
 nice to see something like this :D :D
 
+I was reading some more of the RFCs. In between I started browsing just like that
+and noticed some more open source extensions for brackets, sublime and one WIP
+one for vscode too. I tried the web version of brackets extension - frankly, it
+had some issues. That was unfortunate. Anyways, I noted down the list of tools
+[here](../../existing-tools.md)
+
+Reading the RFCs, I'm having some thoughts, ideas and realizations. For example:
+1. The number of steps needed to start collaborating - it's better if it's
+as little as possible
+2. What if the other person doesn't have the extension installed? Are they
+prompted to install? How?
+3. What if the extension versions of both the users are different? As a
+developer, we need to think about compatibility between versions and see how to
+force upgrade if we have a need to, or support older versions without much
+issues. But of course, older versions will not get new features. And for bug
+fixes, especially security bug fixes, we might have to try to force upgrade!
+
+Now, I'm checking the source code. I thought I could start reading from the
+first release of the source code and see what features they built a bit, and
+then see the master branch source code
+
+Okay. The code is a bit readable, but since I don't know the way atom packages
+work, I'm still trying to understand what's going on. I can see an `activate()`
+function which is having some functions that are getting registered to the
+atom commands in the command paletter I think - "Share portal", "Join portal",
+"Close portal".
+
+I can see quite some code from `teletype-client` being used. I guess I'm going
+to already start seeing what the latest code looks like and then try to
+understand how it works with Atom by understanding a bit of Atom packages.
+
+Now I'm checking the latest code. It's a lot of code. I was checking how the
+authentication happens with GitHub. I actually now forgot how I did it. I might
+have to uninstall teletype and reinstall to find out how I did it. I think I
+used personal access token, but I'm not sure, and looking at the list of my
+personal access tokens, I think I'm reusing the same token in many places? Or
+named them badly
+
+https://github.com/settings/tokens
+
+I can see `keytar` being used for storing credentials
+
+https://www.npmjs.com/package/keytar
+
+It's one of the strategies to store credentials. And `keytar` actually is used
+to manage the system keychain and it supports the three major operating systems
+which is MacOS, Linux and Windows. In MacOS I can see the oauth token being
+stored in the `Keychain Access` software under the name `atom-teletype` and of
+kind `application password`. 
+
+And like I said, it's only one of the strategies. The other strategies are
+`Security Binary Strategy` and `In Memory Strategy` to store credentials in the
+credentials cache. As the name suggests, for `In Memory`, it stays only during
+the lifetime of the current window, that is, when it's in the memory / RAM and
+then it's gone. The `Map` data structure is used here, so I think it's alive
+only till the program is alive and available within it's scope, and then it's
+gone I guess.
+
+The `Security Binary Strategy` seems to be valid only for `darwin`, that is,
+MacOS. I guess it makes sense and is possible in MacOS. I'm checking why. Okay,
+as the name suggests, it's about the binary in MacOS called `security`. They
+execute some commands and use it. I think it's like some command line API to
+the keychain in MacOS? Not entirely sure. But yeah, it's one way to store
+credentials, an extra way for MacOS alone.
+
+And all of it looks more like a key value store. You give a key, and then
+a secret value. And all of the above strategies work that way or have a
+provision to work that way I guess.
+
+For `security` binary, the commands used are
+
+```bash
+# for setting / adding a key and it's value
+$ security add-generic-password -s dummy-service-name -a dummy-key-name -w dummy-value -U
+# for getting a key's value
+$ security find-generic-password -s dummy-service-name -a dummy-key-name -w
+dummy-value
+# for deleting a key and it's value
+$ security delete-generic-password -s dummy-service-name -a dummy-key-name
+keychain: "/Users/karuppiahn/Library/Keychains/login.keychain-db"
+version: 512
+class: "genp"
+attributes:
+    0x00000007 <blob>="dummy-service-name"
+    0x00000008 <blob>=<NULL>
+    "acct"<blob>="dummy-key-name"
+    "cdat"<timedate>=0x32303230303532333038303733325A00  "20200523080732Z\000"
+    "crtr"<uint32>=<NULL>
+    "cusi"<sint32>=<NULL>
+    "desc"<blob>=<NULL>
+    "gena"<blob>=<NULL>
+    "icmt"<blob>=<NULL>
+    "invi"<sint32>=<NULL>
+    "mdat"<timedate>=0x32303230303532333038303830375A00  "20200523080807Z\000"
+    "nega"<sint32>=<NULL>
+    "prot"<blob>=<NULL>
+    "scrp"<sint32>=<NULL>
+    "svce"<blob>="dummy-service-name"
+    "type"<uint32>=<NULL>
+password has been deleted.
+```
+
+Also, I also checked the `Keychain Access` program after adding it, modifying it
+and after deleting it too. It was there, and then it got modified and it got
+deleted too later. So, like I thought, more like a command line interface to
+the system's keychain and `Keychain Access` is the GUI access. I can also
+see where the keychain is present while deleting it. I also saw this
+
+```bash
+$ security list-keychains
+    "/Users/karuppiahn/Library/Keychains/login.keychain-db"
+    "/Library/Keychains/System.keychain"
+```
+
+I guess it's pretty cool. `security` seems to have quite some features. For
+now I'm not gonna dig into it I guess.
+
+I'll just keep it in mind that we are going to use the OS keychain to store the
+oauth token of GitHub and that's it :)
+
 
