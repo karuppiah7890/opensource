@@ -47,4 +47,8 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 
 21. [Build an AR filter for Instagram, Facebook](ideas/build-an-ar-filter-for-instagram-facebook/readme.md)
 
-22. 
+22. [Browser Extension To Delete History](ideas/browser-extension-to-delete-history/readme.md)
+
+23. [Webapp to view .mm files](ideas/webapp-to-mm-files/readme.md)
+
+
