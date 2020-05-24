@@ -307,3 +307,52 @@ able to understand the architecture and working and may be replicate it, or
 else, write some stuff of my own if nothign suits me. But I think I should start
 with this code, no matter what, and write as little code as possible! :)
 
+---
+
+I think in VS Code Live Share during login, what probably happens is, the editor
+is continuously looking at the clipboard and the webpage copies the user code to
+the clipboard and the editor reads from it and then probably removes the code
+too after it's done. 
+
+I can't remember if after authorizing the app, if the focus moved to VS code.
+Idk. If it did, idk how that happened. May be the editor could do that too. A
+lot of times I have noticed zoom take focus. May be that's what they did. 
+
+Initially I had thoughts around - if they used some link - with some protocol,
+and opened that, but then the webpage i was viewing was at a simple HTTP link.
+Idk if custom apps can understand HTTP links too. If they can, then may be even
+that could be used, and the editor could be opened with that link? Something
+like that. And from the link we get the code? 
+
+Good problem to solve. Interesting ;)
+
+Anyways, now I'm thinking about how the documentation for these libraries could
+have been present. Also makes me doubt a bit, given Microsoft bought GitHub and
+their VS Code Live Share is having a great hit and there's no docs for this. Idk
+if there's any link here. Might have to check dates to even see if this
+conspiracy theory is a possibility 😅😂🙈 
+
+Back to the teletype client, I have started to read some code. I noticed that at
+the top level, the exported code is very less. There's Teletype Client,
+something called a FollowState and then Errors. There are many other entities
+internally. I was starting to check em out. I think it will help in
+understanding how things work, but yes, the code, it will only be mostly at the
+client level and that's it. I have to write code to interface with the client
+and also the UI and help the client get data from editor or get data from client
+to put it on the editor.
+
+UI stuff includes command palette, notifications, views to show who's connected
+or whom you are connected to. For now only two members. And then show multi
+cursor, and whenever you hover over it, show name may be?
+
+In VS Code Live Share, the colored cursor looks a bit weird. Like, it's big,
+yes, but somehow it doesn't fit in, it looks a bit off. Just a bit. Idk if it's
+intentional. Very possible. I don't think Microsoft didn't notice what I
+noticed. Anyways.
+
+I saw some code for some star overlay network in the teletype client code.
+ https://en.m.wikipedia.org/wiki/Overlay_network 
+ 
+https://dl.acm.org/doi/10.1002/cpe.3764
+
+https://www.researchgate.net/publication/221450905_The_Peering_Problem_in_Tree-Based_MasterWorker_Overlays/link/0912f5089d32657c74000000/download
