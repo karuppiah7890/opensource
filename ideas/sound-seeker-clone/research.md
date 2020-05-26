@@ -90,3 +90,8 @@ I'm still annoyed though. I mean, I agree people need to earn money, in which
 case they should no go and contribute to open standards and be part of the
 open standards w3c community and then do research and insert their company's
 name as a plug. Not sure if that's okay.
+
+All this is about a solution for the web, though I'm fine with a local solution
+too! Without the Internet, and not complex solutions. Let's see. I mean, we
+could still host services in a closed small network. I was just thinking if it's
+possible to do it all without any external backend services. Let's see!
