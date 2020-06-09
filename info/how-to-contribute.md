@@ -97,3 +97,67 @@ almost everywhere - Cars, Rockets, Elevators and what not.
 
 So, choose a domain that you like and are interested in, and look for open
 source projects in such domains! :)
+
+---
+
+To answer the `Where do I find projects?`, there are some source code hosting
+sites for it :) Some of them are
+
+- GitHub. It's pretty damn famous (for good or bad) and is kind of ruling is
+what I believe. It's the home and host of tons of open source softwares out
+there. It also has some mirrored repositories, meaning repositories whose actual
+source code (original) is somewhere else and the mirror or copy is present in
+GitHub. GitHub has tons of features and is a company recently acquired by
+Microsoft. And Hacktoberfest event by DigitalOcean is usually conducted by
+partnering with GitHub where people are asked to contribute to open source
+projects on GitHub and get goodies only for that.
+
+- GitLab. This is pretty damn famous too. GitLab by itself is an open source
+company with multiple open source products / softwares and enterprise products
+with enterprise features. The company is very very open. They are also a
+completely remote company and they have also open sourced their handbook with
+which they run their company. It's a pretty awesome company. The app
+gitlab.com is the home for lots of open source softwares including the open
+source version of GitLab called GitLab CE (community edition), along with it's
+ecosystem of tools and software, like gitlab runner, gitaly, to name a few.
+
+- BitBucket. It's a famous software by Atlassian a famous company with it's
+famous set of products for software development. You can find open source
+software here too, though I have not personally used it.
+
+- SourceForget. It's an old application is what I think (not sure). I have seen
+quite some old softwares being hosted there.
+
+Those are some of the source code hosting websites that I know of. You can
+search for open source softwares there. Personally I always keep searching in
+GitHub, and it has a lot of the softwares that I use or hear about. But you
+don't have to limit yourselves to it.
+
+Also, there are many softwares that host their source code in their own site
+and you need to use them.
+
+Any source code hosting site will have some set of source versioning tools or
+systems that it supports. So, you need to know them too in a basic manner, to
+work with the different versions of the software and to contribute too.
+
+Source code versioning tools - I have usually worked with softwares that use
+`git`, the famous version control system tool. There are so many other tools
+out there, that are used by some softwares for their source code versioning.
+Some VCS tools I have heard of are - subversion (SVN), mercurial (hg), CVS.
+Check more in this link, if you want to know more
+
+https://en.m.wikipedia.org/wiki/List_of_version-control_software
+
+---
+
+Once you have found a project to work on. You can now think about what kind of
+contribution you want to do and then accordingly do an action based on that.
+
+Now, before doing any sort of contribution, I would first highly recommend to
+just simply know about the software, use the software, so that you understand
+about it. This is a very good thing to do at the first if it's your first time
+working with the software / project.
+
+You can explore about the project and probably it's ecosystem too. 
+
+
