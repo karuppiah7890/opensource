@@ -140,6 +140,10 @@ Any source code hosting site will have some set of source versioning tools or
 systems that it supports. So, you need to know them too in a basic manner, to
 work with the different versions of the software and to contribute too.
 
+You will also need to learn about the source code hosting website itself a bit
+to understand how to contribute code to the project. Just the basics to start
+with should be good! :)
+
 Source code versioning tools - I have usually worked with softwares that use
 `git`, the famous version control system tool. There are so many other tools
 out there, that are used by some softwares for their source code versioning.
