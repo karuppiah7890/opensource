@@ -1,0 +1,5 @@
+Communication is a key life skill and it's useful when it comes to work too, including open source work.
+
+All open source communities have a basic code of conduct, which in short asks contributors to be nice and not jerks, and usually does not tolerate jerks with a zero jerk rule.
+
+Another aspect to communication is - try to communicate what you are trying to do. For example when you are contributing to an issue, go and first communicate that you are trying to contribute. This way, if someone else comes and checks, they know that someone is working on it. And later if you are stuck or are not going to continue, again, go communicate. This way, someone else can go and pick up the issue and work on it, knowing that it's not going to be duplication of work which is a bit usual when there's a lack of communication, where two or more people are working on the same thing, but unfortunately only one PR will get accepted. That's a lot of time and work, which can be utilized to work on something else :)
