@@ -52,3 +52,5 @@ maybe? Make it available for more editors - like Atom, Sublime Text
 23. [Webapp to view .mm files](ideas/webapp-to-mm-files/readme.md)
 
 24. ARP Spoof attack tool!
+
+25. [BoxCI Clone](ideas/boxci-clone/readme.md)
