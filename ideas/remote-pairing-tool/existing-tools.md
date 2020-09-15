@@ -48,6 +48,11 @@ some desktop sharing solution too. Links - https://github.com/jitsi .
 Looks cool. Could learn from them, or reuse their components. Looks cool!
 * [Around App](https://www.around.co/) - This just has screen sharing along with
 video. I don't think it has remote control of mouse and keyboard
+* [Teleconsole](https://github.com/gravitational/teleconsole) - Command line
+tool to share your UNIX terminal and forward local TCP ports to people you
+trust. (No windows I think?)
+* [IntelliJ Code With Me feature](https://www.jetbrains.com/help/idea/code-with-me.html)
+* https://github.com/yudai/gotty
 
 
 More details
