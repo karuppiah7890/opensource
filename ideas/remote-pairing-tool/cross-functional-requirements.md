@@ -29,6 +29,11 @@ it so that anyone in the world can use our product and are not restricted
 because of it's language.
 
 * Configurability
+
+    If the users want to be able to configure something, it should be possible.
+    Themes - Dark / Light / Custom etc? Font size. And similar. Whatever is
+    possible and requested by users.
+
 * Security
     * Authentication / Authorization. Confidentiality.
 
@@ -80,3 +85,11 @@ because of it's language.
 
     If the users are looking for extending features of the product - consider it.
     Some sort of customization or integration with existing tools.
+
+* Cross Platform
+
+    We want our users to be able to use our product no matter on which Operating
+    System they are on, Linux? Windows? Mac OS? No problem.
+
+    Something to consider is - Mobile / Tablet platforms in the future - is it
+    feasible in terms of usability (UI/UX), and what limitations.
