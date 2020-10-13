@@ -174,3 +174,16 @@ https://codemirror.net/
 
 https://arxiv.org/search/?query=crdt&searchtype=all&source=header
 https://arxiv.org/search/?searchtype=author&query=Kleppmann%2C+M
+
+---
+
+https://www.google.com/search?biw=1440&bih=775&sxsrf=ALeKk03newxQcgveDIDnoWtG8mLBHeQaMg%3A1602558897269&ei=sRuFX9GEEO2X4-EPjeiJ2Aw&q=peer+to+peer+network+over+internet&oq=peer+to+peer+network+over+in&gs_lcp=CgZwc3ktYWIQAxgAMgUIABDJAzIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjoHCAAQRxCwAzoECCMQJzoJCAAQyQMQFhAeOgIIADoHCAAQFBCHAlDud1ipmgFglKQBaAFwAHgAgAGxAYgBpwuSAQQwLjEwmAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=psy-ab
+
+https://duckduckgo.com/?q=peer+to+peer+network+setup+in+mac&t=ffab&ia=web
+
+Guide to P2P over internet
+https://medium.com/@shivamrawat_756/guide-to-p2p-over-internet-9f7cf41470bd
+
+https://localtunnel.github.io/www/
+
+https://superuser.com/questions/483033/how-does-peer-to-peer-work-over-the-internet
