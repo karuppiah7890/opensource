@@ -29,3 +29,8 @@ So, the ideas for implementing this were
   use some bluetooth receivers to have bluetooth capabilities - some sort of
   USB kind of devices are present to help with this, you just plug it in and you
   now have bluetooth capabilities! :)
+
+Links to existing Android Apps:
+https://play.google.com/store/apps/details?id=io.appground.blek
+https://play.google.com/store/apps/details?id=io.appground.blekpremium
+https://play.google.com/store/apps/details?id=io.appground.gamepad - Game pad
