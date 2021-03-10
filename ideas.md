@@ -56,3 +56,7 @@
 25. [BoxCI Clone](ideas/boxci-clone/readme.md)
 
 26. [Mouse and Keyboard control from Mobile](ideas/mouse-and-keyboard-control-from-mobile.md)
+
+27. [helm-unused-values](ideas/helm-unused-values.md)
+
+28. [Recording browser](ideas/recording-browser/recording-browser.md)
