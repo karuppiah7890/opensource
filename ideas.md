@@ -60,3 +60,5 @@
 27. [helm-unused-values](ideas/helm-unused-values.md)
 
 28. [Recording browser](ideas/recording-browser/recording-browser.md)
+
+29. [BrowserStack Clone](ideas/browser-stack-clone/browser-stack-clone.md)
