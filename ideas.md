@@ -62,3 +62,7 @@
 28. [Recording browser](ideas/recording-browser/recording-browser.md)
 
 29. [BrowserStack Clone](ideas/browser-stack-clone/browser-stack-clone.md)
+
+30. [Searching GitHub Actions Logs](ideas/searching-github-actions-logs.md)
+
+31. [Searching for PRs with filters](ideas/searching-for-prs-with-filters.md)
